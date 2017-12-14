@@ -1,0 +1,29 @@
+header ul{
+    float: right;
+    list-style: none;
+    padding-right: 20px;
+    color:red;
+    font-size:18px;
+}
+main{
+    clear: both;
+}
+
+.main-contalner{
+    width: 95%;
+    margin:0 auto;
+    margin-top: 70px;
+}
+.right{float: left;
+      background-color: lightblue;
+    width: 70%;
+    height: 400px;
+    margin-bottom: 40px;
+}
+.left{float: left;
+      background-color: skyblue;
+      width: 30%;
+      height: 400px;
+    margin-bottom: 40px;
+
+}

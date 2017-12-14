@@ -1,0 +1,11 @@
+INDEX VERSION 1.4+C:\Users\internousdev\Downloads\pleiades-4.7.1-java-win-64bit-jre_20171019\pleiades\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3812775650.index
+2055351946.index
+3690541818.index
+3290154414.index
+651501875.index
+3981994948.index
+2795787554.index
+1549101164.index
+1315567392.index
+1638503618.index

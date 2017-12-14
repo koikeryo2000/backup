@@ -1,0 +1,5 @@
+package kinou;
+
+public abstract class Mp3Player {
+
+}

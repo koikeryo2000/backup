@@ -1,0 +1,15 @@
+
+public class test {
+
+	public static void main(String[] args) {
+
+		Person taro = new Person();
+
+		taro.name="山田太郎";
+		taro.age=20;
+
+		System.out.println("私の名前は"+ taro.name+"です年齢は"+taro.age+"です");
+
+	}
+
+}

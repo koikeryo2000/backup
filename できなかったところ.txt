@@ -1,0 +1,37 @@
+２カラム
+
+<DOCTYPE html>
+
+<html lang="ja">
+
+<meta charaset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="style.css"> ←
+
+<div class ="">　</div>
+
+<main> </main>
+
+12月13日
+サーブレットのｺｰﾄﾞは間違ってる様子がなく実行してみたらｻｰﾊﾞｰが起動しないｴﾗｰが起きた
+
+原因はwebxml　<url-pattern>の後の  /  を忘れてた。
+
+12月26日 が最後の講義
+
+12月14日 
+
+Struts Problem Report
+
+Struts has detected an unhandled exception: 
+
+Messages: ?There is no Action mapped for namespace [/] and action name [WelcomeAction] associated with context path [/webProj].
+
+Stacktraces
+
+There is no Action mapped for namespace [/] and action name [WelcomeAction] associated with context path [/webProj]. - [unknown location] 
+
+エラーが出た。　
+
+エラー文を読んで　welcomeActionがおかしいと疑い見て　welcomeAction.javaがおかしくないときは
+参照元のstrts.xmlを見てエラーを発見し、直す

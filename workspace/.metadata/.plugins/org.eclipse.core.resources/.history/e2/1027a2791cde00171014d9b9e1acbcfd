@@ -1,0 +1,122 @@
+package testProject01;
+
+public class Helloworld {
+
+	public static void main(String[] args) {
+		System.out.println("Hello world");
+		System.out.println("例外が発生しました。");
+		System.out.println(5%3);
+
+		int a = 10;
+		if (a<20) {
+			System.out.println("A");
+
+			int b =5;
+			if(b<10 && 3<b) {
+				System.out.println("b");
+
+				int c =5;
+				if (c>5||c<=0) {
+					System.out.println("c");
+				}
+			}
+			int d=7;
+
+			if(d > 8) {
+				System.out.println("A");
+			}else if (d<10) {
+				System.out.println("B");
+			}
+
+			int age =35;
+			if (age < 20) {
+				System.out.println("未成年");
+			}else if (age >80) {
+				System.out.println("高齢者");
+			} else {
+				System.out.println("成人");
+			}
+
+			int e =5;
+			if(e%2 ==0) {
+				System.out.println("偶数");
+			}else {
+				System.out.println("奇数");
+			}
+
+			int f =20;
+			if (f>10) {
+				if (f<30) {
+					System.out.println("A");
+				}
+			}
+			int k = 10;
+			if (k>0) {
+				if (k == 2) {
+					System.out.println("A");
+				}else if (k==3) {
+					System.out.println("B");
+				}else {
+					System.out.println("C");
+				}
+				int number =88;
+				if (number <= 100) {
+					if (number <20) {
+						System.out.println("未成年");
+					}else if(number ==77) {
+						System.out.println("喜寿");
+					}else if(number ==88) {
+						System.out.println("米寿");
+					}else {
+						System.out.println("成人");
+					}
+				}
+
+				//switch文とif文の比較
+				int p =1;
+				if(p==0) {
+					System.out.println("pは0に等しい");
+				}else if (a ==1) {
+					System.out.println("aは1に等しい");
+				}
+			}
+			int q =1;
+			switch (q) {
+			case 1:
+				System.out.println("qは１である");
+			break;
+			case 2:
+				System.out.println("qは２である");
+				break;
+			}
+			String[] name = new String[3];
+			name[0]="田中";
+			name[1]="高橋";
+			name[2]="斉藤";
+
+			System.out.println(name[2]);
+
+			String[] name2= {"田中","高橋","斉藤"};
+
+			System.out.println(name2[2]);
+			}
+		char[] c = {'x','y','z'};
+		System.out.println(c[1]);
+
+		int[] i= {1,5,10};
+		System.out.println(i[1]);
+
+		i[1]=3;
+		System.out.println(i[1]);
+
+		//↓１２時間目↓
+for (int h = 0; h < 10; h++) {
+	System.out.println(h);
+
+}
+		}
+
+
+	}
+
+

@@ -1,0 +1,20 @@
+create table addresslist(user_id int(11),name varchar(255),mail varchar(255),tell varchar(255),tell varchar(255),prefecture varchar(255));
+
+
+insert into addresslist (user_id,name,mail,tell,prefecture)values("1","山田太郎","abcd123@yahoo.co.jp","03-0000-0000","東京");
+
+insert into addresslist values
+("2","佐藤花子","xyz777@yahoo.co.jp","073-0000-0000","神奈川"),
+("3","田中浩史","hello888@yahoo.co.jp","045-0000-0000","静岡"),
+("4","鈴木次郎","efg123@yahoo.co.jp","080-0000-0000","沖縄"),
+("5","藤田三郎","cccc999@yahoo.co.jp","090-0000-0000","千葉");
+
+create table fruit_stock(id int(11), fruit varchar(255),number int(11),price int(11), madein varchar(255);
+
+insert into fruit_stock values
+(1,"りんご",33,100,"日本"),
+(2,"オレンジ",40,120,"日本"),
+(3,"イチゴ",10,250,"日本"),
+(4,"ぶどう",25,240,"アメリカ"),
+(5,"ナシ",23,150,"日本"),
+(6,"パイナップル",15,230,"フィリピン");
