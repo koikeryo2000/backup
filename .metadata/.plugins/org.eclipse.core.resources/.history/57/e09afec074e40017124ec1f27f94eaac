@@ -1,0 +1,13 @@
+package com.internousdev.webproj2.dao;
+
+public class HelloStrutsDAO {
+
+
+	public boolean select(){
+
+
+		return ret;
+
+
+	}
+}
