@@ -2,24 +2,11 @@ package capule;
 
 public class Person {
 private String name = null;
-//private int age =0;
-
-
-
-
-
-
-
-
-
-
-
-
-
+private int age =0;
 public Person(String name, int age) {
 	super();
 	this.name = name;
-	//this.age = age;
+	this.age = age;
 }
 
 
