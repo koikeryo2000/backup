@@ -27,8 +27,6 @@
 <fullyQualifiedTypeName name="com.internousdev.webproj5.dao.InquiryCompleteDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj5.util.DBConnector"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
-<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj5.dto.LoginDTO"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -42,5 +40,13 @@
 <fullyQualifiedTypeName name="com.internousdev.template.dto.BuyItemDTO"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.RETURN"/>
 <fullyQualifiedTypeName name="com.internousdev.template.dto.LoginDTO"/>
+<fullyQualifiedTypeName name="com.internousdev.template.dao.UserCreateCompleteDAO"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="com.internousdev.ecsite.util.DBConnector"/>
+<fullyQualifiedTypeName name="com.internousdev.ecsite.dto.BuyItemDTO"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.internousdev.ecsite.dto.LoginDTO"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="com.internousdev.ecsite.dto.MyPageDTO"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
 </qualifiedTypeNameHistroy>

@@ -5,6 +5,9 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\internousdev\Downloads\solare"/>
+			<item value="C:\Users\internousdev\Downloads\ecsite"/>
+			<item value="C:\Users\internousdev\Downloads\template"/>
 			<item value="C:\Users\internousdev\Downloads\template (1)"/>
 			<item value="C:\Users\internousdev\Desktop\WebProj4"/>
 			<item value="C:\Users\internousdev\Downloads\サンプル（WebProj4）-20171221T091515Z-001\サンプル（WebProj4）\WebProj4"/>
