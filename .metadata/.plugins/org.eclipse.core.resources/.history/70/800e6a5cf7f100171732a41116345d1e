@@ -1,0 +1,14 @@
+package dao;
+
+import util.DBConnector;
+
+public class Test {
+
+	public static void main(String[] args) {
+		DBConnector dbconnector = new DBConnector();
+
+		dbconnector.getConnection();
+
+	}
+
+}

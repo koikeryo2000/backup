@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="リソース名 &apos;Booksell/WebContent/login.jsp&apos; を &apos;toppage.jsp&apos; に変更します" description="リソース &apos;login.jsp&apos; の名前変更" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/login.jsp" name="toppage.jsp" stamp="1515119548475" updateReferences="true"/>&#x0A;<refactoring comment="リソース名 &apos;Booksell/sql/Booksell.sql&apos; を &apos;booksell.sql&apos; に変更します" description="リソース &apos;Booksell.sql&apos; の名前変更" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="sql/Booksell.sql" name="booksell.sql" stamp="1515134641922" updateReferences="true"/>
+</session>

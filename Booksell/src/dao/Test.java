@@ -20,14 +20,18 @@ public class Test {
 		String streetAddress;
 		String sex;
 		String phoneNumber;
+		String mailAddress;
 
-		loginUserId ="koike";
-		loginUserPassword="1234";
-		userName="小池";
-		year ="24";
-		streetAddress="中野";
+
+
+		loginUserId ="tanaka3";
+		loginUserPassword="61613";
+		userName="田中3";
+		year ="363";
+		streetAddress="東京3";
 		sex="男";
-		phoneNumber="1234";
+		phoneNumber="61613";
+		mailAddress="ryoinu8@yahoo.co.jp";
 
 		DBConnector dbconnector = new DBConnector();
 
@@ -36,12 +40,18 @@ public class Test {
 		dbconnector.getConnection();
 
 		try {
-			dao.cerateUser(loginUserId, loginUserPassword, userName, year, streetAddress, sex, phoneNumber);
+			dao.cerateUser(loginUserId, loginUserPassword, userName, year, streetAddress, sex, phoneNumber,mailAddress);
+
+			System.out.println("全件表示↓");
+
+			dao.selectAll();
 		} catch (SQLException e) {
 			System.out.println("エラー発生");
 			e.printStackTrace();
 		}
 		System.out.println("dao正常に作動");
 	}
+
+
 
 }

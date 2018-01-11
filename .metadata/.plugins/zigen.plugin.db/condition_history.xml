@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_74" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>jdbc:mysql://localhost:3306/mysql.login_user_transaction</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList" id="ArrayList0"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:mysql://localhost:3306/mysql</string>
+    </void>
+    <void property="table">
+     <string>login_user_transaction</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:mysql://localhost:3306/mysql.booksell.login_user_transaction</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object idref="ArrayList0"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:mysql://localhost:3306/mysql</string>
+    </void>
+    <void property="schema">
+     <string>booksell</string>
+    </void>
+    <void property="table">
+     <string>login_user_transaction</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:mysql://localhost:3306/mysql.item_info_transaction</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList" id="ArrayList1"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:mysql://localhost:3306/mysql</string>
+    </void>
+    <void property="table">
+     <string>item_info_transaction</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:mysql://localhost:3306/mysql.booksell.item_info_transaction</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object idref="ArrayList1"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:mysql://localhost:3306/mysql</string>
+    </void>
+    <void property="schema">
+     <string>booksell</string>
+    </void>
+    <void property="table">
+     <string>item_info_transaction</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

@@ -1,0 +1,15 @@
+package dao;
+
+import java.sql.Connection;
+
+import util.DBConnector;
+
+public class SearchPasswordDAO {
+
+
+	private DBConnector dbConnector = new DBConnector();
+
+	private Connection connection = dbConnector.getConnection();
+
+
+}

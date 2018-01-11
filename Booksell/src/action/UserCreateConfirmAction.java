@@ -11,14 +11,15 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 
 	//フィールド ユーザー登録画面の値
 	private String loginUserId;
-	private String loginPassword;
+	private String loginUserPassword;
 	private String userName;
 	private String year;
 	private String streetAddress;
 	private String sex;
 	private String phoneNumber;
-	public Map<String,Object> session;
+	public Map<String, Object> session;
 	private String errorMassage;
+	private String mailAddress;
 
 
 
@@ -36,13 +37,14 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 
 		if (!(loginUserId.equals(""))
 		) {
-			session.put(loginUserId, loginUserId);
-			session.put(loginPassword,loginPassword );
-			session.put(userName, userName );
-			session.put(year, year );
-			session.put(streetAddress, streetAddress );
-			session.put(sex, sex);
-			session.put(phoneNumber, phoneNumber);
+			session.put("loginUserId", loginUserId);
+			session.put("loginUserPassword",loginUserPassword );
+			session.put("userName", userName );
+			session.put("year", year );
+			session.put("streetAddress", streetAddress );
+			session.put("sex", sex);
+			session.put("phoneNumber", phoneNumber);
+			session.put("mailAddress", mailAddress);
 
 
 		} else {
@@ -69,14 +71,14 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 
 
 
-	public String getLoginPassword() {
-		return loginPassword;
+	public String getLoginUserPassword() {
+		return loginUserPassword;
 	}
 
 
 
-	public void setLoginPassword(String loginPassword) {
-		this.loginPassword = loginPassword;
+	public void setLoginUserPassword(String loginUserPassword) {
+		this.loginUserPassword = loginUserPassword;
 	}
 
 
@@ -141,15 +143,6 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 
 
 
-	public Map<String, Object> getSession() {
-		return session;
-	}
-
-
-
-	public void setSession(Map<String, Object> session) {
-		this.session = session;
-	}
 
 
 
@@ -162,4 +155,26 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	public void setErrorMassage(String errorMassage) {
 		this.errorMassage = errorMassage;
 	}
+
+
+
+	@Override
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+
+	}
+
+
+
+	public String getMailAddress() {
+		return mailAddress;
+	}
+
+
+
+	public void setMailAddress(String mailAddress) {
+		this.mailAddress = mailAddress;
+	}
 }
+
+

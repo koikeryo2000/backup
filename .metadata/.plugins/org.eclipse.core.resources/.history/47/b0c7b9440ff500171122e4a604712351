@@ -1,0 +1,21 @@
+package dao;
+
+
+
+import java.sql.Connection;
+
+import dto.LoginDTO;
+import util.DBConnector;
+
+public class LoginDAO {
+
+private DBConnector dbConnector = new DBConnector();
+private Connection connection = dbConnector.getConnection();
+private LoginDTO loginDTO = new LoginDTO();
+
+public LoginDTO getLoginUserInfo(String loginUserId, String loginPassword){
+	return loginDTO;
+
+}
+
+}

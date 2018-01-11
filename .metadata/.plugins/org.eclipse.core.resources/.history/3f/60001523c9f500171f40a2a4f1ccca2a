@@ -1,0 +1,27 @@
+package dto;
+
+public class SearchPasswordDTO {
+	private String login_pass;
+
+	private boolean searchFlg = false;
+
+	public String getLogin_pass() {
+		return login_pass;
+	}
+
+	public void setLogin_pass(String login_pass) {
+		this.login_pass = login_pass;
+	}
+
+
+
+	public boolean isSearchFlg() {
+		return searchFlg;
+	}
+
+	public void setSearchFlg(boolean searchFlg) {
+		this.searchFlg = searchFlg;
+	}
+}
+
+

@@ -1,0 +1,17 @@
+package dao;
+
+
+import com.mysql.jdbc.Connection;
+
+import dto.LoginDTO;
+import util.DBConnector;
+
+public class LoginDAO {
+
+	private DBConnector dbConnector = new DBConnector();
+
+	private Connection connection = dbConnector.getConnection();
+
+	private LoginDTO loginDTO = new LoginDTO();
+
+}
