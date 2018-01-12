@@ -36,6 +36,8 @@ public class ManagerCreateCompleteDAO {
 			preparedStatement.setString(5, position);
 			preparedStatement.setString(6, dateUtil.getDate());
 
+			System.out.println("DAOのpositionの値"+position);
+
 			preparedStatement.execute();
 		} catch (SQLException e) {
 

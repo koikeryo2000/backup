@@ -19,10 +19,15 @@ public class ManagerCreateCompleteAction extends ActionSupport implements Sessio
 
 	public Map<String, Object> session;
 
+
+
+
 	private ManagerCreateCompleteDAO managerCreateCompleteDAO = new ManagerCreateCompleteDAO();
 
 
 public String execute(){
+	String result=SUCCESS;
+
 
 
 		managerCreateCompleteDAO.createManager(session.get("loginUserId").toString(),
@@ -38,9 +43,6 @@ public String execute(){
 		System.out.println("DAOに渡される値チェック"+session.get("position"));
 
 
-
-
-	String result = SUCCESS;
 	return result;
 
 }

@@ -8,6 +8,8 @@ public class ManagerLoginDTO {
 
 	private String userName;
 
+	private String position;
+
 	private boolean loginFlg = false;
 
 	public String getLoginId() {
@@ -40,5 +42,13 @@ public class ManagerLoginDTO {
 
 	public void setLoginFlg(boolean loginFlg) {
 		this.loginFlg = loginFlg;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
 	}
 }

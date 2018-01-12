@@ -12,5 +12,7 @@
 
 <p>新しい管理者を登録する<a href='<s:url action="GoManagerCreateAction" />'>こちら</a></p>
 
+<p>新しい商品を登録する<a href='<s:url action="GoItemCreateAction" />'>こちら</a></p>
+
 </body>
 </html>

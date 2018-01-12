@@ -31,6 +31,22 @@ public class ManagerLoginAction extends ActionSupport implements SessionAware {
 
 		if (((ManagerLoginDTO)session.get("loginUser")).getLoginFlg()) {
 			 result =SUCCESS;
+
+				if (session.get("position").equals("社長")) {
+					result=SUCCESS;
+				}
+				if (session.get("position").equals("部長")) {
+					result=SUCCESS;
+				}
+				if (session.get("position").equals("店長")) {
+					result=SUCCESS;
+				}
+				if (session.get("position").equals("社員")) {
+					result=SUCCESS;
+				}
+				if (session.get("position").equals("アルバイト")) {
+					result=NONE;
+				}
 		}
 
 		return result;
