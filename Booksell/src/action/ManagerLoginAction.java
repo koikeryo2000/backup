@@ -32,19 +32,21 @@ public class ManagerLoginAction extends ActionSupport implements SessionAware {
 		if (((ManagerLoginDTO)session.get("loginUser")).getLoginFlg()) {
 			 result =SUCCESS;
 
-				if (session.get("position").equals("社長")) {
+			 System.out.println(managerLoginDTO.getPosition());
+
+				if (managerLoginDTO.getPosition().equals("社長")) {
 					result=SUCCESS;
 				}
-				if (session.get("position").equals("部長")) {
+				if (managerLoginDTO.getPosition().equals("部長")) {
 					result=SUCCESS;
 				}
-				if (session.get("position").equals("店長")) {
+				if (managerLoginDTO.getPosition().equals("店長")) {
 					result=SUCCESS;
 				}
-				if (session.get("position").equals("社員")) {
+				if (managerLoginDTO.getPosition().equals("社員")) {
 					result=SUCCESS;
 				}
-				if (session.get("position").equals("アルバイト")) {
+				if (managerLoginDTO.getPosition().equals("アルバイト")) {
 					result=NONE;
 				}
 		}
