@@ -40,7 +40,7 @@
 
 <!-- ログインする -->
 <action name="LoginAction" class="action.LoginAction" method="execute">
-<result name="success">buyItem.jsp</result>
+<result name="success">loginComplete.jsp</result>
 <result name="error">loginError.jsp</result>
 </action>
 
@@ -95,6 +95,28 @@
 <result name="success">ItemCreateConfirmAction.jsp</result>
 
 </action>
+
+<!-- テストアップローダー -->
+	<action name="imageuploadAction" class="action.ImageAction" method="execute">
+			<result name="SUCCESS">/loginError.jsp</result>
+		</action>
+
+		<!-- 画像をmysqlに保存テストページ -->
+		<action name="imageUploadAction" class="action.ImageUploadAction" method="execute">
+<result name="success">ImageSearch.jsp</result>
+</action>
+
+<!-- jspで入力したnameを使いmysqlから画像を検索して移動先のjspで検索結果を表示 -->
+<action name="imageSearchAction" class="action.ImageSearchAction" >
+<result name="success">imagesearchComplete.jsp</result>
+</action>
+
+<!-- ユーザーの登録情報を変更ページに移動 -->
+<action name="GoUserInformationAction" class="action.GoUserInformationAction" method="execute" >
+<result name="success">UserUpdateInformation.jsp</result>
+</action>
+
+
 
 
 

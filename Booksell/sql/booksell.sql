@@ -44,5 +44,11 @@ insert_date datetime,
 update_date datetime
 );
 
+ CREATE TABLE image_upload (
+  id INT(5) not null primary key auto_increment,
+  name VARCHAR(20),
+  image MEDIUMBLOB
+ ) ;
+
 INSERT INTO item_info_transaction(item_name, item_price, item_stock, Category, Description) VALUES("ブラックジャックによろしく", 500, 1,"漫画", "藪医者物語");
 INSERT INTO Manager_transaction(login_id, login_pass, user_name, year, position) VALUES("test", "1234", "テスト","58", "社長");

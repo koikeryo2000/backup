@@ -74,6 +74,22 @@
 </s:form>
 </table>
 
+<h3>テストアップローダー</h3>
+
+<table>
+<s:form action="imageUploadAction"  enctype="multipart/form-data">
+		<input type="text" name="name" >
+
+		<input type="file" name="image" accept="image/jpeg/png"/>
+		<s:submit name="sumbit" value="アップロード" />
+	</s:form>
+	</table>
+
+
+
+
+
+
 
 
 </body>

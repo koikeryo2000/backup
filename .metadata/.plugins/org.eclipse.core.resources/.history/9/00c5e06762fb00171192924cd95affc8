@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<constant name="struts.devMode" value="true"/>
+<package name="action" extends="struts-default">
+
+<!-- 未使用 -->
+<action name="WelcomeAction">
+<result name="success">login.jsp</result>
+</action>
+
+<!-- UserCreateAction 新規会員登録入力ページに行く -->
+<action name="UserCreateAction" class="action.UserCreateAction" method="execute">
+<result name="success">userCreate.jsp</result>
+</action>
+
+<!-- UserCreateConfirmAction 新規会員登録入力ページ  -->
+<action name="UserCreateConfirmAction" class="action.UserCreateConfirmAction" method="execute">
+<result name="success">userCreateConfirm.jsp</result>
+<result name="error">userCreate.jsp</result>
+</action>
+
+<!-- UserCreateCompleteAction 新規会員登録 入力した値をDBに記入する -->
+<action name="UserCreateCompleteAction" class="action.UserCreateCompleteAction" method="execute">
+<result name="success">userCreateComplete.jsp</result>
+</action>
+
+
+<!-- 新規会員登録ページに戻る -->
+<action name="goUserCreateAction" class="action.GoUserCreateAction" method="execute">
+<result name="success">userCreate.jsp</result>
+</action>
+
+<!-- ログインページに戻る -->
+<action name="gotopPageAction" class="action.GoTopPageAction" method="execute">
+<result name="success">index.jsp</result>
+</action>
+
+<!-- ログインする -->
+<action name="LoginAction" class="action.LoginAction" method="execute">
+<result name="success">loginComplete.jsp</result>
+<result name="error">loginError.jsp</result>
+</action>
+
+
+
+<!-- 名前、ID電話番号などを使いパスワードを検索する -->
+<action name="SearchPasswordAction" class="action.SearchPasswordAction" method="execute">
+<result name="success">passwordSearch.jsp</result>
+<result name="error">passwordSearchError.jsp</result>
+</action>
+
+<!-- 管理者画面へ移動 -->
+<action name="GoManagerLoginAction" class="action.GoManagerLoginAction" method="execute">
+<result name="success">ManagerLogin.jsp</result>
+</action>
+
+<!-- 管理者画面に移動するためにログインをする -->
+<action name="ManagerLoginAction" class="action.ManagerLoginAction" method="execute">
+<result name="success">CompleteManagerLogin.jsp</result>
+<result name="error">ManagerLoginError.jsp</result>
+<result name="none">partTimeJobManagerCreateComplete.jsp</result>
+</action>
+
+<!-- 新しい管理者を登録する -->
+<action name="GoManagerCreateAction" class="action.GoManagerCreateAction" method="execute">
+<result name="success">ManagerCreate.jsp</result>
+</action>
+
+<!-- 新しい管理者確認ページに移動 -->
+<action name="ManagerCreateConfirmAction" class="action.ManagerCreateConfirmAction" method="execute">
+<result name="success">ManagerCreateConfirm.jsp</result>
+</action>
+
+<!-- 新しい管理者の情報をDBに入れる -->
+<action name="ManagerCreateCompleteAction" class="action.ManagerCreateCompleteAction" method="execute">
+<result name="success">ManagerCreateComplete.jsp</result>
+
+</action>
+
+<!-- 管理者メニュー画面に戻る -->
+<action name="GoCompleteManagerAction" class="action.GoCompleteManagerAction" method="execute">
+<result name="success">CompleteManagerLogin.jsp</result>
+</action>
+
+<!-- 商品登録ページに移動 -->
+<action name="GoItemCreateAction" class="action.GoItemCreateAction" method="execute">
+<result name="success">itemCreate.jsp</result>
+</action>
+
+<!-- 商品登録ページから確認ページに移動 -->
+<action name="ItemCreateConfirmAction" class="action.ItemCreateConfirmAction" method="execute">
+<result name="success">ItemCreateConfirmAction.jsp</result>
+
+</action>
+
+<!-- テストアップローダー -->
+	<action name="imageuploadAction" class="action.ImageAction" method="execute">
+			<result name="SUCCESS">/loginError.jsp</result>
+		</action>
+
+		<!-- 画像をmysqlに保存テストページ -->
+		<action name="imageUploadAction" class="action.ImageUploadAction" method="execute">
+<result name="success">ImageSearch.jsp</result>
+</action>
+
+<!-- jspで入力したnameを使いmysqlから画像を検索して移動先のjspで検索結果を表示 -->
+<action name="imageSearchAction" class="action.ImageSearchAction" >
+<result name="success">imagesearchComplete.jsp</result>
+</action>
+
+<!-- ユーザーの登録情報を変更ページに移動 -->
+<action name="GoUserInformationAction" class="action.GoUserInformationAction" method="execute" >
+<result name="success">UserUpdateInformation.jsp</result>
+</action>
+
+<!-- ユーザーのパスワードを変更する -->
+<action name="UserUpdatePasswordAction" class="action.UserUpdatePasswordAction" method="execute">
+<result name="success">imagesearchComplete.jsp</result>
+</action>
+
+
+
+
+
+</package>
+</struts>
