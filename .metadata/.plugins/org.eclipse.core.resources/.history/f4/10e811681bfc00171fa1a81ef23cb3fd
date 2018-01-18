@@ -1,0 +1,80 @@
+package action;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import dao.ShowItemListDAO;
+import dto.ItemDTO;
+
+public class ShowItemListAction extends ActionSupport  {
+
+	List<ItemDTO> itemList = null;
+
+	ShowItemListDAO showItemListDAO = new ShowItemListDAO();
+
+	ItemDTO itemDTO = null;
+
+	ResultSet rs = null;
+
+	public String execute(){
+
+		String result =ERROR;
+
+		HttpServletResponse response = ServletActionContext.getResponse();
+		HttpServletRequest request = ServletActionContext.getRequest();
+
+		String id = request.getParameter("id");
+
+		try {
+			itemList = new ArrayList<>();
+			rs = showItemListDAO.showItem();
+			if (rs !=null) {
+				while (rs.next()) {
+					itemDTO = new ItemDTO();
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+
+		itemList.add(itemDTO);
+
+		System.out.println(itemDTO.getItemName());
+		System.out.println(itemDTO.getDescription());
+
+		try {
+			OutputStream out = response.getOutputStream();
+			out.write(itemDTO.getData());
+			out.flush();
+			out.close();
+
+
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+
+
+
+
+		String result=SUCCESS;
+
+
+
+		return result;
+
+	}
+
+}

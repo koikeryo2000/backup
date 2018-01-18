@@ -1,0 +1,53 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import dto.ItemDTO;
+import util.DBConnector;
+//import util.DateUtil;
+
+public class ShowItemListDAO {
+
+	ItemDTO itemDTO = new ItemDTO();
+
+	private DBConnector dbConnector = new DBConnector();
+
+	private Connection connection = dbConnector.getConnection();
+
+	public String sql ="SELECT * FROM item_info_transaction ";
+
+	//private DateUtil dateUtil = new DateUtil();
+
+	public ItemDTO showItem(){
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			if (resultSet.next()) {
+				itemDTO.setItemName(resultSet.getString("item_name"));
+				itemDTO.setItemPrice(resultSet.getInt("item_price"));
+				itemDTO.setItemStock(resultSet.getInt("item_stock"));
+				itemDTO.setImage(resultSet.getBlob("image"));
+
+				byte data[] = itemDTO.getImage().getBytes(1, (int) itemDTO.getImage().length());
+				itemDTO.setData(data);
+				itemDTO.setCategory(resultSet.getString("Category"));
+				itemDTO.setDescription(resultSet.getString("Description"));
+				//preparedStatement.setString(9, dateUtil.getDate());
+				connection.close();
+			}
+
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+
+
+		return itemDTO;
+
+
+	}
+}

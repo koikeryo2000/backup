@@ -56,6 +56,8 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		// ログイン情報を比較
 		if(((LoginDTO) session.get("loginUser")).getLoginFlg()) {
 			result = SUCCESS;
+			//商品購入機能を作ったら商品購入履歴を作る
+			//session.put("login_user_id", login)
 
 
 		}

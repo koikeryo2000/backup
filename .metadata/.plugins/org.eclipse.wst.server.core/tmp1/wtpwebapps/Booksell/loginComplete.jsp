@@ -12,6 +12,7 @@
 	<h3>ログインに成功しました。</h3>
 
 	<p>登録情報変更は<a href='<s:url action="GoUserInformationAction" />'>こちら</a></p>
+	<p>ログアウトする場合は<a href='<s:url action="LogoutAction" />'>こちら</a></p>
 
 </body>
 </html>

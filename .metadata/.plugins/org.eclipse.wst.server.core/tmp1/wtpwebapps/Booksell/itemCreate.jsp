@@ -9,14 +9,14 @@
 </head>
 <body>
 <table>
-<s:form action="ItemCreateConfirmAction" enctype="multipart/form-data"  >
+<s:form action="ItemCreateCompleteAction" enctype="multipart/form-data"  >
 
 <tr>
 					<td>
 						<label>商品名:</label>
 					</td>
 					<td>
-						<input type="text" required="required" name="itemName" value="" />
+						<input type="text" required="required" name="itemName" />
 					</td>
 				</tr>
 				<tr>
@@ -24,7 +24,7 @@
 						<label>価格:</label>
 					</td>
 					<td>
-						<input type="text" required="required" name="itemPrice" value="" />
+						<input type="text" required="required" name="itemPrice"  />
 					</td>
 				</tr>
 				<tr>
@@ -32,13 +32,13 @@
 						<label>個数:</label>
 					</td>
 					<td>
-						<input type="text"required="required" name="itemStock" value="" />
+						<input type="text"required="required" name="itemStock"  />
 					</td>
 				</tr>
 
 				  <tr>
                 <td>画像: </td>
-                <td><input type="file" name="image" accept="image/jpeg"/></td>
+                <td><input type="file" name="image" accept="image/jpeg/png"/></td>
             </tr>
 
 				<tr>
@@ -46,7 +46,7 @@
 						<label>カテゴリー:</label>
 					</td>
 					<td>
-						<input type="text"required="required" name="category" value="" />
+						<input type="text"required="required" name="category"  />
 					</td>
 				</tr>
 
@@ -55,18 +55,11 @@
 						<label>商品説明:</label>
 					</td>
 					<td>
-						<input type="text" required="required" name="description" value="" />
+						<input type="text" required="required" name="description"  />
 					</td>
 				</tr>
 
-				<tr>
-					<td>
-						<label>画像test2:</label>
-					</td>
-					<td>
-						<input type="text" required="required" name="image2" value="" />
-					</td>
-				</tr>
+
 
 				<s:submit value="登録"/>
 

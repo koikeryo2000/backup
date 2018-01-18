@@ -14,6 +14,8 @@
 
 <p>新しい商品を登録する<a href='<s:url action="GoItemCreateAction" />'>こちら</a></p>
 
+<p>登録した商品を表示する<a href='<s:url action="GoShowItemListAction" />'>こちら</a></p>
+
 
 
 </body>

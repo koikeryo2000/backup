@@ -104,4 +104,34 @@ public void setDataList(List<ImageDTO> dataList) {
 	this.dataList = dataList;
 }
 
+
+public RetrieveIamgesDAO getImagedao() {
+	return imagedao;
+}
+
+
+public void setImagedao(RetrieveIamgesDAO imagedao) {
+	this.imagedao = imagedao;
+}
+
+
+public ResultSet getRs() {
+	return rs;
+}
+
+
+public void setRs(ResultSet rs) {
+	this.rs = rs;
+}
+
+
+public ImageDTO getDataBean() {
+	return dataBean;
+}
+
+
+public void setDataBean(ImageDTO dataBean) {
+	this.dataBean = dataBean;
+}
+
 }
