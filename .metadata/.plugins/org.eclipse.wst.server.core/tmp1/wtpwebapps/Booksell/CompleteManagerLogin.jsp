@@ -16,7 +16,9 @@
 
 <p>登録した商品を表示する<a href='<s:url action="GoShowItemListAction" />'>こちら</a></p>
 
+<p>ログアウトする場合は<a href='<s:url action="LogoutAction" />'>こちら</a></p>
 
+<p>商品の情報を変更する<a href='<s:url action="GoUpdateItemAction" />'>こちら</a></p>
 
 </body>
 </html>

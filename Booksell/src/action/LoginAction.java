@@ -51,7 +51,13 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		// ログイン実行
 		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
 
+
+
 		session.put("loginUser", loginDTO);
+		session.put("loginUserId", loginDTO.getLoginId());
+
+		System.out.println("loginDTOの中身"+loginDTO.getLoginId());
+		System.out.println("MAPのログインユーザーID"+session.get("loginUserId"));
 
 		// ログイン情報を比較
 		if(((LoginDTO) session.get("loginUser")).getLoginFlg()) {
@@ -62,6 +68,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 		}
 		return result;
+
 
 
 	}

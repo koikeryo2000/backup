@@ -18,11 +18,11 @@ public class ManagerCreateCompleteDAO {
 
 	public Map<String,Object> session;
 
-	public String sql = "INSERT INTO Manager_transaction(login_id, login_pass, user_name, year, position, insert_date) VALUES(?,?,?,?,?,?)";
+	public String sql = "INSERT INTO Manager_transaction(login_id, login_pass, user_name, year, position, user_master_id, insert_date) VALUES(?,?,?,?,?,?,?)";
 
 
 
-	public void createManager(String loginUserId, String loginUserPassword, String userName, String year, String position) {
+	public void createManager(String loginUserId, String loginUserPassword, String userName, String year, String position, String login_user_id) {
 
 
 
@@ -34,7 +34,8 @@ public class ManagerCreateCompleteDAO {
 			preparedStatement.setString(3, userName);
 			preparedStatement.setString(4, year);
 			preparedStatement.setString(5, position);
-			preparedStatement.setString(6, dateUtil.getDate());
+			preparedStatement.setString(6, login_user_id);
+			preparedStatement.setString(7, dateUtil.getDate());
 
 			System.out.println("DAOのpositionの値"+position);
 

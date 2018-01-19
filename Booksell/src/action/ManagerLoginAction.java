@@ -28,9 +28,15 @@ public class ManagerLoginAction extends ActionSupport implements SessionAware {
 		managerLoginDTO = managerLoginDAO.getLoginManager(loginUserId, loginPassword);
 
 		session.put("loginUser", managerLoginDTO);
+		session.put("login_user_id", managerLoginDTO.getUserName());
 
 		if (((ManagerLoginDTO)session.get("loginUser")).getLoginFlg()) {
 			 result =SUCCESS;
+
+
+			 System.out.println("ログインした人の名前"+managerLoginDTO.getUserName());
+			 System.out.println("MAPの名前の値"+session.get("login_user_id"));
+
 
 			 System.out.println(managerLoginDTO.getPosition());
 

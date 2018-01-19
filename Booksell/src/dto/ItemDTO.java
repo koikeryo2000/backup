@@ -14,6 +14,7 @@ import java.util.Date;
 		private String description;
 		private Blob image;
 		private Date insertdate;
+		private String login_user_id;
 
 		public String getItemName() {
 			return itemName;
@@ -62,6 +63,12 @@ import java.util.Date;
 		}
 		public void setInsertdate(Date insertdate) {
 			this.insertdate = insertdate;
+		}
+		public String getLogin_user_id() {
+			return login_user_id;
+		}
+		public void setLogin_user_id(String login_user_id) {
+			this.login_user_id = login_user_id;
 		}
 
 	}

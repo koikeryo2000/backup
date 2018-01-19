@@ -29,6 +29,7 @@ item_stock int,
 image MEDIUMBLOB,
 Category varchar(30),
 Description varchar(200),
+user_master_id varchar(16),
 insert_date datetime,
 update_date datetime
 );
@@ -40,8 +41,17 @@ login_pass varchar(16),
 user_name varchar(50),
 year varchar(5),
 position varchar(16),
+user_master_id varchar(16),
 insert_date datetime,
 update_date datetime
+);
+
+create table Unsubscribe(
+id int not null primary key auto_increment,
+user_master_id varchar(16),
+why varchar(100),
+reason varchar(250),
+insert_date datetime
 );
 
  CREATE TABLE image_upload (
@@ -50,5 +60,5 @@ update_date datetime
   image MEDIUMBLOB
  ) ;
 
-INSERT INTO item_info_transaction(item_name, item_price, item_stock, Category, Description) VALUES("ブラックジャックによろしく", 500, 1,"漫画", "藪医者物語");
-INSERT INTO Manager_transaction(login_id, login_pass, user_name, year, position) VALUES("test", "1234", "テスト","58", "社長");
+INSERT INTO item_info_transaction(item_name, item_price, item_stock, Category, Description, user_master_id) VALUES("ブラックジャックによろしく", 500, 1,"漫画", "藪医者物語","テスト");
+INSERT INTO Manager_transaction(login_id, login_pass, user_name, year, position, user_master_id) VALUES("test", "1234", "テスト","58", "社長","テスト");

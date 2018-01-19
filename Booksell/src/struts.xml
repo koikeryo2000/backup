@@ -139,9 +139,24 @@
 <result name="success">ShowItemList.jsp</result>
 </action>
 
-<!-- これだめ商品一覧を表示 -->
+<!-- これ商品一覧を表示 -->
 <action name="ShowItemListAction" class="action.ShowItemListAction" method="execute" >
 <result name="success">showItemListComplete.jsp</result>
+</action>
+
+<!-- 商品の情報を変更するページに移動する -->
+<action name="GoUpdateItemAction" class="action.GoUpdateItemAction" method="execute" >
+<result name="success">UpdateItem.jsp</result>
+</action>
+
+<!-- ユーザー退会ページに移動 -->
+<action name="GoUnsubscribeAction" class="action.GoUnsubscribeAction" method="execute" >
+<result name="success">Unsubscribe.jsp</result>
+</action>
+
+<!-- ユーザー退会ページに移動 -->
+<action name="UnsubscribeAction" class="action.UnsubscribeAction" method="execute" >
+<result name="success">UnsubscribeComplete.jsp</result>
 </action>
 
 

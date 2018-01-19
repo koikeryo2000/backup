@@ -34,13 +34,15 @@ public String execute(){
 				session.get("loginUserPassword").toString(),
 				session.get("userName").toString(),
 				session.get("year").toString(),
-				session.get("position").toString());
+				session.get("position").toString(),
+		session.get("login_user_id").toString());
 
 		System.out.println("DAOに渡される値チェック"+session.get("loginUserId"));
 		System.out.println("DAOに渡される値チェック"+session.get("loginUserPassword"));
 		System.out.println("DAOに渡される値チェック"+session.get("userName"));
 		System.out.println("DAOに渡される値チェック"+session.get("year"));
 		System.out.println("DAOに渡される値チェック"+session.get("position"));
+		System.out.println("DAOに渡される値チェック"+session.get("login_user_id"));
 
 
 	return result;

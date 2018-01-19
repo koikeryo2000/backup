@@ -20,9 +20,9 @@ public class ItemCreateDAO {
 
 	private Connection connection = dbConnector.getConnection();
 
-	public String sql ="INSERT INTO item_info_transaction(item_name, item_price, item_stock, image, Category, Description, insert_date) VALUES(?,?,?,?,?,?,?)";
+	public String sql ="INSERT INTO item_info_transaction(item_name, item_price, item_stock, image, Category, Description, user_master_id, insert_date) VALUES(?,?,?,?,?,?,?,?)";
 
-	public void createItem(String itemName, int itemPrice, int itemStock,File image, String category, String description ){
+	public void createItem(String itemName, int itemPrice, int itemStock,File image, String category, String description, String login_user_id ){
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
@@ -33,7 +33,8 @@ public class ItemCreateDAO {
 			preparedStatement.setBinaryStream(4, inputStream);
 			preparedStatement.setString(5, category);
 			preparedStatement.setString(6, description);
-			preparedStatement.setString(7, dateUtil.getDate());
+			preparedStatement.setString(7, login_user_id);
+			preparedStatement.setString(8, dateUtil.getDate());
 
 			preparedStatement.execute();
 

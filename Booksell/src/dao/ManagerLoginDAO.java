@@ -32,9 +32,11 @@ public class ManagerLoginDAO {
 
 			if (resultSet.next()) {
 				managerloginDTO.setLoginId(resultSet.getString("login_id"));
-				managerloginDTO.setLoginId(resultSet.getString("login_pass"));
-				managerloginDTO.setLoginId(resultSet.getString("user_name"));
+				managerloginDTO.setLoginPassword(resultSet.getString("login_pass"));
+				managerloginDTO.setUserName(resultSet.getString("user_name"));
 				managerloginDTO.setPosition(resultSet.getString("position"));
+
+				System.out.println(managerloginDTO.getUserName());
 
 				if (!(resultSet.getString("login_id").equals(null))) {
 					managerloginDTO.setLoginFlg(true);

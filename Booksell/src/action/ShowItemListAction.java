@@ -49,7 +49,9 @@ public class ShowItemListAction extends ActionSupport  {
 					itemDTO.setItemStock(rs.getInt("item_stock"));
 					itemDTO.setCategory(rs.getString("Category"));
 					itemDTO.setDescription(rs.getString("Description"));
+					itemDTO.setLogin_user_id(rs.getString("user_master_id"));
 					itemDTO.setInsertdate(rs.getDate("insert_date"));
+
 					itemList.add(itemDTO);
 
 				}

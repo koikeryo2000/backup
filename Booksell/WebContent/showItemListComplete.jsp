@@ -28,6 +28,9 @@
 						<s:property value="description" />
 					</td>
 					<td>
+						<s:property value="Login_user_id" />
+					</td>
+					<td>
 						<s:property value="Insertdate" />
 					</td>
 

@@ -1,12 +1,17 @@
 package action;
 
 import java.io.File;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.ItemCreateDAO;
 
-public class ItemCreateCompleteAction extends ActionSupport {
+public class ItemCreateCompleteAction extends ActionSupport implements SessionAware{
+
+	public Map<String,Object> session;
 
 	private String itemName;
 	private int itemPrice;
@@ -20,8 +25,8 @@ public class ItemCreateCompleteAction extends ActionSupport {
 
 		ItemCreateDAO ItemCreatedao = new ItemCreateDAO();
 
-		ItemCreatedao.createItem(itemName, itemPrice, itemStock, image, category, description);
-
+		ItemCreatedao.createItem(itemName, itemPrice, itemStock, image, category, description,session.get("login_user_id").toString());
+		System.out.println("MAPのログインしたIDの値"+session.get("login_user_id"));
 
 
 
@@ -78,5 +83,13 @@ public class ItemCreateCompleteAction extends ActionSupport {
 
 	public void setImage(File image) {
 		this.image = image;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
 	}
 }
