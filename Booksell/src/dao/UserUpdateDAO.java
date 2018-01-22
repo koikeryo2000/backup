@@ -5,28 +5,36 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import util.DBConnector;
+import util.DateUtil;
 
 public class UserUpdateDAO {
+
+
 
 	private DBConnector dbConnector = new DBConnector();
 
 	private Connection connection = dbConnector.getConnection();
 
+	private DateUtil dateUtil = new DateUtil();
+
 	public void UserUpdate(String column, String change, String userId){
 
-		String sql = "UPDATE login_user_transaction set "+ column +" = ? where login_id = ?";
+		//String sql = "UPDATE login_user_transaction set "+ column +" = ? where login_id = ?";
+		String sql = "UPDATE login_user_transaction set "+ column +" = ?, updated_date = ?  where login_id = ?";
 
 		try {
 
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			//preparedStatement.setString(1, column);
 			preparedStatement.setString(1, change);
-			preparedStatement.setString(2, userId);
+			preparedStatement.setString(2, dateUtil.getDate());
+			preparedStatement.setString(3, userId);
 
 			preparedStatement.execute();
 
 		} catch (Exception e) {
 			e.printStackTrace();
+
 		}finally {
 			try {
 				connection.close();
@@ -37,5 +45,10 @@ public class UserUpdateDAO {
 		}
 
 	}
+
+
+
+
+
 
 }

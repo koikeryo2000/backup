@@ -1,14 +1,20 @@
 package action;
 
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.ItemUpdateDAO;
 
-public class ItemUpdateAction extends ActionSupport  {
+public class ItemUpdateAction extends ActionSupport implements SessionAware  {
 
 	private String column;
 	private String change;
 	private String itemName;
+
+	public Map<String, Object> session;
 
 	private ItemUpdateDAO itemUpdateDAO = new ItemUpdateDAO();
 
@@ -16,11 +22,13 @@ public class ItemUpdateAction extends ActionSupport  {
 	public String execute(){
 		String result = SUCCESS;
 
-		itemUpdateDAO.ItemUpdate(column, change, itemName);
+		itemUpdateDAO.ItemUpdate(column, change, itemName, session.get("login_user_id").toString());
 
 		System.out.println("カラム"+column);
 		System.out.println("変更内容"+change);
 		System.out.println("商品名"+ itemName);
+
+		System.out.println("sessionのユーザーID"+session.get("login_user_id"));
 
 
 
@@ -56,5 +64,15 @@ public class ItemUpdateAction extends ActionSupport  {
 
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
+	}
+
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
 	}
 }

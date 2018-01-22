@@ -31,8 +31,10 @@ public class UserUpdateAction extends ActionSupport implements SessionAware {
 		System.out.println("loginIｄの値"+session.get("loginUserId"));
 		System.out.println("カラムの値"+column);
 		System.out.println("変更項目の値"+change);
-		
-		
+
+
+
+
 
 		return result;
 

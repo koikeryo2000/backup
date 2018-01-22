@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import util.DBConnector;
+import util.DateUtil;
 
 public class ItemUpdateDAO {
 
@@ -12,14 +13,18 @@ public class ItemUpdateDAO {
 
 	private Connection connection = dbConnector.getConnection();
 
-	public void ItemUpdate(String column, String change, String itemName){
-		String sql ="UPDATE item_info_transaction set " + column + " = ? where item_name = ?";
+	private DateUtil dateUtil = new DateUtil();
+
+	public void ItemUpdate(String column, String change, String itemName ,String userid){
+		String sql ="UPDATE item_info_transaction set " + column + " = ?, update_date = ?, user_master_id = ? where item_name = ?";
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
 			preparedStatement.setString(1, change);
-			preparedStatement.setString(2, itemName);
+			preparedStatement.setString(2, dateUtil.getDate());
+			preparedStatement.setString(3, userid);
+			preparedStatement.setString(4, itemName);
 
 			preparedStatement.execute();
 		} catch (Exception e) {
