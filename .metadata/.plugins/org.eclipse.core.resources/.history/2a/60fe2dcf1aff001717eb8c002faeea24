@@ -1,0 +1,63 @@
+package action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import dao.ShowUserInformationDAO;
+import dto.UserInformationDTO;
+
+public class GoUserInformationAction extends ActionSupport implements SessionAware {
+
+	public Map<String, Object> session;
+
+
+
+	private UserInformationDTO userInformationDTO = new UserInformationDTO();
+
+	private  ShowUserInformationDAO showUserInformationDAO = new ShowUserInformationDAO();
+
+	public String execute(){
+		String result = SUCCESS;
+
+		userInformationDTO = showUserInformationDAO.getUserInfo(session.get("loginUserId").toString());
+
+		session.put("loginUserId" ,userInformationDTO.getLoginId());
+		session.put("loginUserPassword", userInformationDTO.getLoginpass());
+		session.put("userName", userInformationDTO.getUserName());
+		session.put("year", userInformationDTO.getYear());
+		session.put("streetAddress", userInformationDTO.getStreetAddress());
+		session.put("sex", userInformationDTO.getSex());
+		session.put("phoneNumber", userInformationDTO.getPhoneNumber());
+		session.put("mailAddress", userInformationDTO.getMailAddress());
+
+		System.out.println("DTOのloginIdの値チェック"+userInformationDTO.getLoginId());
+
+		System.out.println("sessionに値がちゃんとセットされてるかチェック"+session.get("loginId"));
+		System.out.println("sessionに値がちゃんとセットされてるかチェック"+session.get("phoneNumber"));
+		System.out.println("sessionに値がちゃんとセットされてるかチェック"+session.get("mailAddress"));
+
+
+
+		return result;
+
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+	public UserInformationDTO getUserInformationDTO() {
+		return userInformationDTO;
+	}
+
+	public void setUserInformationDTO(UserInformationDTO userInformationDTO) {
+		this.userInformationDTO = userInformationDTO;
+	}
+}

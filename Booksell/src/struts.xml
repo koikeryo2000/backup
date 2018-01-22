@@ -120,6 +120,11 @@
 <result name="success">UserUpdateInformation.jsp</result>
 </action>
 
+<!-- ユーザーの登録情報を変更 -->
+<action name="UserUpdateAction" class="action.UserUpdateAction" method="execute" >
+<result name="success">userCreateComplete.jsp</result>
+</action>
+
 <!-- 商品登録ページに移動 -->
 <action name="GoItemCreateAction" class="action.GoItemCreateAction" method="execute">
 <result name="success">itemCreate.jsp</result>
@@ -145,8 +150,8 @@
 </action>
 
 <!-- 商品の情報を変更するページに移動する -->
-<action name="GoUpdateItemAction" class="action.GoUpdateItemAction" method="execute" >
-<result name="success">UpdateItem.jsp</result>
+<action name="ItemUpdateAction" class="action.ItemUpdateAction" method="execute" >
+<result name="success">showItemListComplete.jsp</result>
 </action>
 
 <!-- ユーザー退会ページに移動 -->
@@ -154,7 +159,7 @@
 <result name="success">Unsubscribe.jsp</result>
 </action>
 
-<!-- ユーザー退会ページに移動 -->
+<!-- ユーザー退会 -->
 <action name="UnsubscribeAction" class="action.UnsubscribeAction" method="execute" >
 <result name="success">UnsubscribeComplete.jsp</result>
 </action>

@@ -23,7 +23,7 @@ drop table if exists item_info_transaction;
 
 create table item_info_transaction(
 id int not null primary key auto_increment,
-item_name varchar(50),
+item_name varchar(50) unique,
 item_price int,
 item_stock int,
 image MEDIUMBLOB,

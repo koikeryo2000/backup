@@ -277,3 +277,12 @@
 0:0:0:0:0:0:0:1 - - [19/Jan/2018:18:05:33 +0900] "POST /Booksell/LoginAction.action HTTP/1.1" 200 424
 0:0:0:0:0:0:0:1 - - [19/Jan/2018:18:05:34 +0900] "GET /Booksell/GoUnsubscribeAction.action HTTP/1.1" 200 2293
 0:0:0:0:0:0:0:1 - - [19/Jan/2018:18:05:43 +0900] "POST /Booksell/UnsubscribeAction.action HTTP/1.1" 200 168
+127.0.0.1 - - [19/Jan/2018:18:06:24 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:18:06:26 +0900] "GET /Booksell/ HTTP/1.1" 200 866
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:18:06:29 +0900] "GET /Booksell/UserCreateAction.action HTTP/1.1" 200 4961
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:18:06:46 +0900] "POST /Booksell/UserCreateConfirmAction.action HTTP/1.1" 200 1295
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:18:06:47 +0900] "POST /Booksell/UserCreateCompleteAction.action HTTP/1.1" 200 309
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:18:06:48 +0900] "GET /Booksell/gotopPageAction.action HTTP/1.1" 200 866
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:18:06:57 +0900] "POST /Booksell/LoginAction.action HTTP/1.1" 200 424
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:18:06:58 +0900] "GET /Booksell/GoUnsubscribeAction.action HTTP/1.1" 200 2293
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:18:07:05 +0900] "POST /Booksell/UnsubscribeAction.action HTTP/1.1" 200 168

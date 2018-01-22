@@ -4,161 +4,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
 <title>ユーザー登録情報変更ページ</title>
 </head>
 <body>
+
 <table>
-			<s:form action="UserCreateConfirmAction">
-				<tr>
-					<td>
-						<label>ログインID:</label>
-					</td>
-					<td>
-						<input type="text" required="required" name="loginUserId" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>ログインPASS:</label>
-					</td>
-					<td>
-						<input type="text" required="required" name="loginUserPassword" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>ユーザー名:</label>
-					</td>
-					<td>
-						<input type="text"required="required" name="userName" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>変更したいパスワードを入力してください:</label>
-					</td>
-					<td>
-						<input type="text"required="required" name="NewPassWord" value="" />
-					</td>
-				</tr>
-				<s:submit value="変更"/>
-				</s:form>
-				</table>
 
-				<table>
-			<s:form action="UserCreateConfirmAction">
-				<tr>
-					<td>
-						<label>ログインID:</label>
-					</td>
-					<td>
-						<input type="text" required="required" name="loginUserId" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>ログインPASS:</label>
-					</td>
-					<td>
-						<input type="text" required="required" name="loginUserPassword" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>ユーザー名:</label>
-					</td>
-					<td>
-						<input type="text"required="required" name="userName" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>変更したい住所を入力してください:</label>
-					</td>
-					<td>
-						<input type="text"required="required" name="NewStreetAddress" value="" />
-					</td>
-				</tr>
-				<s:submit value="変更"/>
-				</s:form>
-				</table>
+<s:iterator value="UserInfoList">
+<tr id="box">
+<td>
+<label>ログインID</label>
+</td>
+<td>
+<s:property value="loginId" escape="false" />
+</td>
+</tr>
 
-				<table>
-			<s:form action="UserCreateConfirmAction">
-				<tr>
-					<td>
-						<label>ログインID:</label>
-					</td>
-					<td>
-						<input type="text" required="required" name="loginUserId" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>ログインPASS:</label>
-					</td>
-					<td>
-						<input type="text" required="required" name="loginUserPassword" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>ユーザー名:</label>
-					</td>
-					<td>
-						<input type="text"required="required" name="userName" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>変更したい電話番号を入力してください:</label>
-					</td>
-					<td>
-						<input type="text"required="required" name="NewPhoneNumber" value="" />
-					</td>
-				</tr>
-				<s:submit value="変更"/>
-				</s:form>
-				</table>
+<tr id="box">
+<td>
+<label>ログインパスワード</label>
+</td>
+<td>
+<s:property value="loginpass" escape="false" />
+</td>
+</tr>
 
-				<table>
-			<s:form action="UserCreateConfirmAction">
-				<tr>
-					<td>
-						<label>ログインID:</label>
-					</td>
-					<td>
-						<input type="text" required="required" name="loginUserId" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>ログインPASS:</label>
-					</td>
-					<td>
-						<input type="text" required="required" name="loginUserPassword" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>ユーザー名:</label>
-					</td>
-					<td>
-						<input type="text"required="required" name="userName" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>変更したいメールアドレスを入力してください:</label>
-					</td>
-					<td>
-						<input type="text"required="required" name="NewMailAddress" value="" />
-					</td>
-				</tr>
-				<s:submit value="変更"/>
-				</s:form>
-				</table>
+<tr id="box">
+<td>
+<label>ユーザー名</label>
+</td>
+<td>
+<s:property value="userName" escape="false" />
+</td>
+</tr>
+
+<tr id="box">
+<td>
+<label>年齢</label>
+</td>
+<td>
+<s:property value="year" escape="false" />
+</td>
+</tr>
+
+<tr id="box">
+<td>
+<label>住所</label>
+</td>
+<td>
+<s:property value="streetAddress" escape="false" />
+</td>
+</tr>
+
+<tr id="box">
+<td>
+<label>性別</label>
+</td>
+<td>
+<s:property value="sex" escape="false" />
+</td>
+</tr>
+
+<tr id="box">
+<td>
+<label>電話番号</label>
+</td>
+<td>
+<s:property value="phoneNumber" escape="false" />
+</td>
+</tr>
+
+<tr id="box">
+<td>
+<label>メールアドレス</label>
+</td>
+<td>
+<s:property value="mailAddress" escape="false" />
+</td>
+</tr>
+</s:iterator>
+</table>
+
+<table>
+<s:form action="UserUpdateAction">
+<p>変更する項目を選んでください</p>
+<select required="required" name="column" >
+<option value="">-</option>
+<option value="login_pass">ログインパスワード</option>
+<option value="user_name">ユーザー名</option>
+<option value="year">年齢</option>
+<option value="street_address">住所</option>
+<option value="phone_number">電話番号</option>
+<option value="mail_address">メールアドレス</option>
+
+</select>
+
+<p>変更内容を入力してください</p>
+<input type="text"required="required" name="change" value="" />
+
+<s:submit value="変更"/>
+
+</s:form>
+</table>
+
 
 
 
