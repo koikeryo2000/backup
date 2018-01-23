@@ -1,0 +1,18 @@
+package util;
+
+import org.apache.commons.lang3.RandomStringUtils;
+
+public class NetMoneyCode {
+
+	public String getNetMoneyCode(){
+		String str =RandomStringUtils.random(10,"012345ABCDEFGHIJKMLOPQRSTUWXYZ");
+
+		return str;
+
+	}
+
+
+
+
+
+}

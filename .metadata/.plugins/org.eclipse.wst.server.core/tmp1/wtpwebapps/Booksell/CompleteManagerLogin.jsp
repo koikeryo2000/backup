@@ -20,5 +20,7 @@
 
 <p>商品の情報を変更する<a href='<s:url action="GoUpdateItemAction" />'>こちら</a></p>
 
+<p>仮想通貨を発行する<a href='<s:url action="GoNetMoneyAction" />'>こちら</a></p>
+
 </body>
 </html>

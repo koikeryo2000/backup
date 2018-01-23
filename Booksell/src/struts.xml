@@ -122,7 +122,7 @@
 
 <!-- ユーザーの登録情報を変更 -->
 <action name="UserUpdateAction" class="action.UserUpdateAction" method="execute" >
-<result name="success">userCreateComplete.jsp</result>
+<result name="success">UserUpdateComplete.jsp</result>
 </action>
 
 <!-- 商品登録ページに移動 -->
@@ -163,6 +163,39 @@
 <action name="UnsubscribeAction" class="action.UnsubscribeAction" method="execute" >
 <result name="success">UnsubscribeComplete.jsp</result>
 </action>
+
+
+
+<!-- 仮想通貨作成ページに移動 -->
+<action name="GoNetMoneyAction" class="action.GoNetMoneyAction" method="execute" >
+<result name="success">NetMoneyCreate.jsp</result>
+</action>
+
+<!-- 発行通貨確認ページに移動 -->
+<action name="NetMoneyCreateConfirmAction" class="action.NetMoneyCreateConfirmAction" method="execute" >
+<result name="success">NetMoneyCreateConfirm.jsp</result>
+</action>
+
+<!-- 仮想通貨を発行 -->
+<action name="NetMoneyCreateCompleteAction" class="action.NetMoneyCreateCompleteAction" method="execute" >
+<result name="success">NetMoneyCreateConfirm.jsp</result>
+</action>
+
+<!-- 会員が仮想通貨をチャージするページに移動 -->
+<action name="GoChargeWalletAction" class="action.GoChargeWalletAction" method="execute" >
+<result name="success">ChargeWallet.jsp</result>
+</action>
+
+<!-- ページで入力された仮想通貨番号をDBに送る -->
+<action name="ChargeWalletAction" class="action.ChargeWalletAction" method="execute" >
+<result name="success">ChargeWallet.jsp</result>
+<result name="error">loginError.jsp</result>
+</action>
+
+
+
+
+
 
 
 

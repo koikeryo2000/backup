@@ -1,0 +1,32 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import util.DBConnector;
+import util.DateUtil;
+
+public class NetMoneyCreateCompleteDAO  {
+
+	private DBConnector dbConnector = new DBConnector();
+
+	 private Connection connection = dbConnector.getConnection();
+
+	 private DateUtil dateUtil = new DateUtil();
+
+	 public void CreateNetMoney(int price, String ManagerId){
+		 String sql = "INSERT INTO net_money (net_money_code, price, Manager_master_id, insert_date) VALUES(?, ?, ?, ?)";
+
+		 try {
+			PreparedStatement preparedStatement =connection.prepareStatement(sql);
+
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+
+	 }
+
+}

@@ -15,6 +15,7 @@ street_address varchar(100),
 sex varchar(5),
 phone_number varchar(20),
 mail_address varchar(100),
+wallet int,
 insert_date datetime,
 updated_date datetime
 );
@@ -34,6 +35,19 @@ insert_date datetime,
 update_date datetime
 );
 
+create table Item_info(
+id int not null primary key auto_increment,
+item_name varchar(50) unique,
+item_price int,
+item_stock int,
+image varchar(250),
+Category varchar(30),
+Description varchar(200),
+user_master_id varchar(16),
+insert_date datetime,
+update_date datetime
+);
+
 create table Manager_transaction(
 id int not null primary key auto_increment,
 login_id varchar(16) unique,
@@ -44,6 +58,17 @@ position varchar(16),
 user_master_id varchar(16),
 insert_date datetime,
 update_date datetime
+);
+
+create table net_money(
+id int not null primary key auto_increment,
+net_money_code varchar(16),
+price int,
+used varchar(10),
+user_master_id varchar(16),
+Manager_master_id varchar(16),
+insert_date datetime,
+used_date datetime
 );
 
 create table Unsubscribe(

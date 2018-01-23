@@ -8,6 +8,8 @@ public class LoginDTO {
 
 	private String userName;
 
+	private int wallet;
+
 
 
 	private boolean loginFlg = false;
@@ -42,6 +44,14 @@ public class LoginDTO {
 
 	public void setLoginFlg(boolean loginFlg) {
 		this.loginFlg = loginFlg;
+	}
+
+	public int getWallet() {
+		return wallet;
+	}
+
+	public void setWallet(int wallet) {
+		this.wallet = wallet;
 	}
 
 

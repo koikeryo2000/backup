@@ -1,0 +1,51 @@
+package action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import dao.ChageWalletDAO;
+import dto.WalletDTO;
+
+public class ChargeWalletAction extends ActionSupport implements SessionAware {
+
+	private WalletDTO walletDTO = new WalletDTO();
+
+	public Map<String,Object> session;
+
+	private String NetMoneyNumber;
+
+	private ChageWalletDAO chagewalletDAO = new ChageWalletDAO();
+
+
+	public String execute(){
+		String result =ERROR;
+
+		walletDTO = chagewalletDAO.showNetMoney(NetMoneyNumber);
+
+		if (((walletDTO).)) {
+
+		}
+
+		return result;
+
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+	public String getNetMoneyNumber() {
+		return NetMoneyNumber;
+	}
+
+	public void setNetMoneyNumber(String netMoneyNumber) {
+		NetMoneyNumber = netMoneyNumber;
+	}
+}

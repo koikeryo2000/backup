@@ -55,6 +55,11 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 		session.put("loginUser", loginDTO);
 		session.put("loginUserId", loginDTO.getLoginId());
+		session.put("UserWallet",loginDTO.getWallet());
+
+		System.out.println("ログインした人の財布の中身"+loginDTO.getWallet());
+
+		System.out.println("Mapの財布"+session.get("UserWallet"));
 
 		System.out.println("loginDTOの中身"+loginDTO.getLoginId());
 		System.out.println("MAPのログインユーザーID"+session.get("loginUserId"));

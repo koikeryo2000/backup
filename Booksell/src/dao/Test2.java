@@ -1,19 +1,22 @@
 package dao;
 
-import util.DateUtil;
+
+
 
 public class Test2 {
 
 	public static void main(String[] args) {
 
+		int a =1;
+		int b =2;
 
-		DateUtil date = new DateUtil();
+		int c= a+b;
 
-		String a =null;
+		System.out.println("足し算"+c);
 
-		a=date.getDate();
 
-		System.out.println(a);
+
+
 	}
 
 }
