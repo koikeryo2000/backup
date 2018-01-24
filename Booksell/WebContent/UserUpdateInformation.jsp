@@ -108,6 +108,8 @@
 </s:form>
 </table>
 
+<p>mypageに移動する<a href='<s:url action="GoMypageAction" />'>こちら</a></p>
+
 
 
 

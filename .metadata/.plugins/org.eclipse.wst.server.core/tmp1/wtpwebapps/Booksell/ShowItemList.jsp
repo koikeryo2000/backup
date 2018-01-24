@@ -18,6 +18,6 @@
 		<button type="submit">商品一覧表示</button>
 	</s:form>
 
-
+<p>管理者ページに移動する<a href='<s:url action="GoManagerPageAction" />'>こちら</a></p>
 </body>
 </html>

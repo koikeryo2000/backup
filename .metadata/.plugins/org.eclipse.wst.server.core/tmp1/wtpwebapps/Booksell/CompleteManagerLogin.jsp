@@ -22,5 +22,12 @@
 
 <p>仮想通貨を発行する<a href='<s:url action="GoNetMoneyAction" />'>こちら</a></p>
 
+<p>会員の退会理由を見る<a href='<s:url action="GoUnsubscribeListAction" />'>こちら</a></p>
+
+<p>新しい商品を登録する<a href='<s:url action="GoProductCreateAction" />'>こちら</a></p>
+
+<p>商品一覧を表示する<a href='<s:url action="GoShowProductListAction" />'>こちら</a></p>
+
+
 </body>
 </html>

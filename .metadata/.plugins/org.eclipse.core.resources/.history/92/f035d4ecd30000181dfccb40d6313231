@@ -1,0 +1,44 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import dto.UnsubscribeDTO;
+import util.DBConnector;
+
+public class UnsubscribeListDAO {
+
+	UnsubscribeDTO unsubscribeDTO = new UnsubscribeDTO();
+
+	private DBConnector dbConnector = new DBConnector();
+
+	private Connection connection = dbConnector.getConnection();
+
+	public UnsubscribeDTO showUnsubscribe(){
+
+		String sql ="SELECT * FROM unsubscribe ";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			if (resultSet.next()) {
+				unsubscribeDTO.setUserName(resultSet.getString("user_master_id"));
+				unsubscribeDTO.setWhy(resultSet.getString("why"));
+				unsubscribeDTO.setReason(resultSet.getString("reason"));
+				unsubscribeDTO.setDate(resultSet.getDate("insert_date"));
+			}
+
+
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		return unsubscribeDTO;
+
+	}
+
+}

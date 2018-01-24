@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<constant name="struts.devMode" value="true"/>
+<package name="action" extends="struts-default">
+
+<!-- 未使用 -->
+<action name="WelcomeAction">
+<result name="success">login.jsp</result>
+</action>
+
+<!-- UserCreateAction 新規会員登録入力ページに行く -->
+<action name="UserCreateAction" class="action.UserCreateAction" method="execute">
+<result name="success">userCreate.jsp</result>
+</action>
+
+<!-- UserCreateConfirmAction 新規会員登録入力ページ  -->
+<action name="UserCreateConfirmAction" class="action.UserCreateConfirmAction" method="execute">
+<result name="success">userCreateConfirm.jsp</result>
+<result name="error">userCreate.jsp</result>
+</action>
+
+<!-- UserCreateCompleteAction 新規会員登録 入力した値をDBに記入する -->
+<action name="UserCreateCompleteAction" class="action.UserCreateCompleteAction" method="execute">
+<result name="success">userCreateComplete.jsp</result>
+</action>
+
+
+<!-- 新規会員登録ページに戻る -->
+<action name="goUserCreateAction" class="action.GoUserCreateAction" method="execute">
+<result name="success">userCreate.jsp</result>
+</action>
+
+<!-- ログインページに戻る -->
+<action name="gotopPageAction" class="action.GoTopPageAction" method="execute">
+<result name="success">index.jsp</result>
+</action>
+
+<!-- ログインする -->
+<action name="LoginAction" class="action.LoginAction" method="execute">
+<result name="success">loginComplete.jsp</result>
+<result name="error">loginError.jsp</result>
+</action>
+
+<!-- ログアウトする -->
+<action name="LogoutAction" class="action.LogoutAction" method="execute">
+<result name="success">index.jsp</result>
+</action>
+
+
+
+
+<!-- 名前、ID電話番号などを使いパスワードを検索する -->
+<action name="SearchPasswordAction" class="action.SearchPasswordAction" method="execute">
+<result name="success">passwordSearch.jsp</result>
+<result name="error">passwordSearchError.jsp</result>
+</action>
+
+<!-- 管理者画面へ移動 -->
+<action name="GoManagerLoginAction" class="action.GoManagerLoginAction" method="execute">
+<result name="success">ManagerLogin.jsp</result>
+</action>
+
+<!-- 管理者画面に移動するためにログインをする -->
+<action name="ManagerLoginAction" class="action.ManagerLoginAction" method="execute">
+<result name="success">CompleteManagerLogin.jsp</result>
+<result name="error">ManagerLoginError.jsp</result>
+<result name="none">partTimeJobManagerCreateComplete.jsp</result>
+</action>
+
+<!-- 新しい管理者を登録する -->
+<action name="GoManagerCreateAction" class="action.GoManagerCreateAction" method="execute">
+<result name="success">ManagerCreate.jsp</result>
+</action>
+
+<!-- 新しい管理者確認ページに移動 -->
+<action name="ManagerCreateConfirmAction" class="action.ManagerCreateConfirmAction" method="execute">
+<result name="success">ManagerCreateConfirm.jsp</result>
+</action>
+
+<!-- 新しい管理者の情報をDBに入れる -->
+<action name="ManagerCreateCompleteAction" class="action.ManagerCreateCompleteAction" method="execute">
+<result name="success">ManagerCreateComplete.jsp</result>
+
+</action>
+
+<!-- 管理者メニュー画面に戻る -->
+<action name="GoCompleteManagerAction" class="action.GoCompleteManagerAction" method="execute">
+<result name="success">CompleteManagerLogin.jsp</result>
+</action>
+
+<!-- 商品一覧を表示する -->
+<action name="ShowItemListAction" class="action.ShowItemListAction" method="execute">
+<result name="success">ShowItemListActionComplete.jsp</result>
+</action>
+
+
+
+
+
+<!-- テストアップローダー -->
+	<action name="imageuploadAction" class="action.ImageAction" method="execute">
+			<result name="SUCCESS">/loginError.jsp</result>
+		</action>
+
+		<!-- 画像をmysqlに保存テストページ -->
+		<action name="imageUploadAction" class="action.ImageUploadAction" method="execute">
+<result name="success">ImageSearch.jsp</result>
+</action>
+
+<!-- jspで入力したnameを使いmysqlから画像を検索して移動先のjspで検索結果を表示 -->
+<action name="imageSearchAction" class="action.ImageSearchAction" >
+<result name="success">imagesearchComplete.jsp</result>
+</action>
+
+<!-- ユーザーの登録情報を変更ページに移動 -->
+<action name="GoUserInformationAction" class="action.GoUserInformationAction" method="execute" >
+<result name="success">UserUpdateInformation.jsp</result>
+</action>
+
+<!-- ユーザーの登録情報を変更 -->
+<action name="UserUpdateAction" class="action.UserUpdateAction" method="execute" >
+<result name="success">UserUpdateComplete.jsp</result>
+</action>
+
+<!-- 商品登録ページに移動 -->
+<action name="GoItemCreateAction" class="action.GoItemCreateAction" method="execute">
+<result name="success">itemCreate.jsp</result>
+</action>
+
+
+
+
+
+<!-- 商品情報をDBに入れる -->
+<action name="ItemCreateCompleteAction" class="action.ItemCreateCompleteAction" method="execute">
+<result name="success">CompleteManagerLogin.jsp</result>
+</action>
+
+<!-- 商品一覧を表示するためのページに移動する -->
+<action name="GoShowItemListAction" class="action.GoShowItemListAction" method="execute">
+<result name="success">ShowItemList.jsp</result>
+</action>
+
+<!-- これ商品一覧を表示 -->
+<action name="ShowItemListAction" class="action.ShowItemListAction" method="execute" >
+<result name="success">showItemListComplete.jsp</result>
+</action>
+
+<!-- 商品の情報を変更するページに移動する -->
+<action name="ItemUpdateAction" class="action.ItemUpdateAction" method="execute" >
+<result name="success">showItemListComplete.jsp</result>
+</action>
+
+<!-- ユーザー退会ページに移動 -->
+<action name="GoUnsubscribeAction" class="action.GoUnsubscribeAction" method="execute" >
+<result name="success">Unsubscribe.jsp</result>
+</action>
+
+<!-- ユーザー退会 -->
+<action name="UnsubscribeAction" class="action.UnsubscribeAction" method="execute" >
+<result name="success">UnsubscribeComplete.jsp</result>
+</action>
+
+
+
+<!-- 仮想通貨作成ページに移動 -->
+<action name="GoNetMoneyAction" class="action.GoNetMoneyAction" method="execute" >
+<result name="success">NetMoneyCreate.jsp</result>
+</action>
+
+<!-- 発行通貨確認ページに移動 -->
+<action name="NetMoneyCreateConfirmAction" class="action.NetMoneyCreateConfirmAction" method="execute" >
+<result name="success">NetMoneyCreateConfirm.jsp</result>
+</action>
+
+<!-- 仮想通貨を発行 -->
+<action name="NetMoneyCreateCompleteAction" class="action.NetMoneyCreateCompleteAction" method="execute" >
+<result name="success">NetMoneyCreateConfirm.jsp</result>
+</action>
+
+<!-- 会員が仮想通貨をチャージするページに移動 -->
+<action name="GoChargeWalletAction" class="action.GoChargeWalletAction" method="execute" >
+<result name="success">ChargeWallet.jsp</result>
+</action>
+
+<!-- ページで入力された仮想通貨番号をDBに送る -->
+<action name="ChargeWalletAction" class="action.ChargeWalletAction" method="execute" >
+<result name="success">ChargeWalletComplete.jsp</result>
+<result name="error">ChageWalletError.jsp</result>
+</action>
+
+
+
+<!-- Mypageに移動する -->
+<action name="GoMypageAction" class="action.GoMypageAction" method="execute" >
+<result name="success">loginComplete.jsp</result>
+</action>
+
+<!-- ManagerPageに移動する -->
+<action name="GoManagerPageAction" class="action.GoManagerPageAction" method="execute" >
+<result name="success">CompleteManagerLogin.jsp</result>
+</action>
+
+
+
+<!-- 退会ユーザー一覧ページに移動する -->
+<action name="GoUnsubscribeListAction" class="action.GoUnsubscribeListAction" method="execute" >
+<result name="success">CompleteManagerLogin.jsp</result>
+</action>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</package>
+</struts>

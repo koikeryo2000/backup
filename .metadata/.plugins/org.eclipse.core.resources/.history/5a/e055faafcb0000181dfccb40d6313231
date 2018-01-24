@@ -1,0 +1,32 @@
+package dao;
+
+
+
+
+public class Test2 {
+
+	public static void main(String[] args) {
+
+		String a ="商品がない";
+		String b ="微妙";
+		String c =null;
+		String d ="aaaa";
+
+
+
+
+		String e;
+
+		e=a;
+		e=b;
+		e=c;
+		e=d;
+
+		System.out.println("足し算"+e);
+
+
+
+
+	}
+
+}

@@ -61,6 +61,8 @@
 </s:form>
 </table>
 
+<p>管理者ページに移動する<a href='<s:url action="GoManagerPageAction" />'>こちら</a></p>
+
 
 
 </body>

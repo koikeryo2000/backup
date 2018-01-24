@@ -34,11 +34,18 @@ public class ChageWalletDAO {
 			if (resultSet.next()) {
 				walletDTO.setPrice(resultSet.getString("price"));
 				walletDTO.setUsed(resultSet.getString("used"));
-			}
-			if (!(resultSet.getString("price").equals(null))) {
-				walletDTO.setFlg(true);
-			}
 
+				if (!(resultSet.getString("price").equals(null))) {
+					walletDTO.setFlg(true);
+				}
+			}else {
+				walletDTO.setErrorMsg("NetMoneyの番号が間違ってるため登録できません。");
+			}
+			//if (!(resultSet.getString("price").equals(null))) {
+				//walletDTO.setFlg(true);
+			//}
+
+System.out.println("エラー原因"+ walletDTO.getErrorMsg());
 
 
 		} catch (Exception e) {

@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@taglib prefix="s" uri="/struts-tags" %>
+<!DOCTYPE html >
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>仮想通貨登録エラーページ</title>
+</head>
+<body>
+<p>仮想通貨登録失敗</p>
+
+<br>
+
+<p>エラー原因は下記のとおりです</p>
+<s:property value="errorMsg" escape="false" />
+<s:property value="errormsg" escape="false" />
+
+<p>mypageに移動する<a href='<s:url action="GoMypageAction" />'>こちら</a></p>
+</body>
+</html>

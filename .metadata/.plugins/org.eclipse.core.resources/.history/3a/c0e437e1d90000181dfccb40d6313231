@@ -1,0 +1,49 @@
+package action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import dao.UnsubscribeListDAO;
+import dto.UnsubscribeDTO;
+
+public class UnsubscribeListAction extends ActionSupport {
+
+	UnsubscribeDTO unsubscribeDTO = new UnsubscribeDTO();
+
+	UnsubscribeListDAO unsubscribeListDAO = new UnsubscribeListDAO();
+
+
+
+	ArrayList<UnsubscribeDTO> unsubscribeList = new ArrayList<UnsubscribeDTO>();
+
+	public String execute(){
+		String result;
+		result=SUCCESS;
+
+		unsubscribeList = new ArrayList<>();
+
+		unsubscribeDTO = unsubscribeListDAO.showUnsubscribe();
+
+		System.out.println("DTOの中身"+unsubscribeDTO.getUserName());
+
+		unsubscribeList
+
+
+
+		return result;
+
+	}
+
+	public UnsubscribeDTO getUnsubscribeDTO() {
+		return unsubscribeDTO;
+	}
+
+	public void setUnsubscribeDTO(UnsubscribeDTO unsubscribeDTO) {
+		this.unsubscribeDTO = unsubscribeDTO;
+	}
+
+
+
+}

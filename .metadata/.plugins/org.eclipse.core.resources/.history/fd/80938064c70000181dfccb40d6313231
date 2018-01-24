@@ -1,0 +1,134 @@
+package action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import dao.UnsubscribeDAO;
+
+public class UnsubscribeAction extends ActionSupport implements SessionAware {
+
+private UnsubscribeDAO unsubscribeDAO = new UnsubscribeDAO();
+
+private String why;
+
+private String why1;
+
+private String why2;
+
+private String why3;
+
+private String why4;
+
+private String total;
+
+private String reason;
+
+
+	public Map<String, Object> session;
+
+	public String execute(){
+
+		total= why+why1+why2+why3+why4;
+
+		System.out.println("あわせたら！？"+total);
+
+
+		System.out.println("whyの値"+why);
+		System.out.println("resonの値"+reason);
+
+		System.out.println("MAPのログインユーザーID"+session.get("loginUserId"));
+
+
+
+
+
+
+
+		try {
+			//unsubscribeDAO.deleteUser(session.get("loginUserId").toString());
+		} catch (Exception e) {
+
+		}
+
+
+		try {
+			//unsubscribeDAO.Unsubscribe(session.get("loginUserId").toString(), why, reason);
+		} catch (Exception e) {
+
+		}
+
+		String result =SUCCESS;
+
+
+
+
+		return result;
+
+
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+	public String getWhy() {
+		return why;
+	}
+
+	public void setWhy(String why) {
+		this.why = why;
+	}
+
+	public String getReason() {
+		return reason;
+	}
+
+	public void setReason(String reason) {
+		this.reason = reason;
+	}
+
+	public String getWhy1() {
+		return why1;
+	}
+
+	public void setWhy1(String why1) {
+		this.why1 = why1;
+	}
+
+	public String getWhy2() {
+		return why2;
+	}
+
+	public void setWhy2(String why2) {
+		this.why2 = why2;
+	}
+
+	public String getWhy3() {
+		return why3;
+	}
+
+	public void setWhy3(String why3) {
+		this.why3 = why3;
+	}
+
+	public String getWhy4() {
+		return why4;
+	}
+
+	public void setWhy4(String why4) {
+		this.why4 = why4;
+	}
+
+
+
+
+
+
+}

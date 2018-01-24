@@ -7,12 +7,18 @@ public class Test2 {
 
 	public static void main(String[] args) {
 
-		int a =1;
-		int b =2;
+		String a ;
+		String b ;
+		String c ;
+		String d ;
 
-		int c= a+b;
 
-		System.out.println("足し算"+c);
+
+		String e;
+
+
+
+		//System.out.println("足し算"+e);
 
 
 

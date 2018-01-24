@@ -28,6 +28,7 @@
 </s:form>
 </table>
 
+<p>管理者メニューに戻る<a href='<s:url action="GoCompleteManagerAction" />'>こちら</a></p>
 
 </body>
 </html>

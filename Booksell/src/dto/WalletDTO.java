@@ -10,6 +10,8 @@ public class WalletDTO {
 
 	private String UserWallet;
 
+	 private String ErrorMsg;
+
 	private boolean Flg = false;
 	public String getNetMoneyCode() {
 		return NetMoneyCode;
@@ -49,5 +51,13 @@ public class WalletDTO {
 
 	public void setUserWallet(String userWallet) {
 		UserWallet = userWallet;
+	}
+
+	public String getErrorMsg() {
+		return ErrorMsg;
+	}
+
+	public void setErrorMsg(String errorMsg) {
+		ErrorMsg = errorMsg;
 	}
 }

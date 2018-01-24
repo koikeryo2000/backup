@@ -1,0 +1,25 @@
+package dao;
+
+
+
+
+public class Test2 {
+
+	public static void main(String[] args) {
+
+		String a =null;
+		String b ="微妙";
+		String c =null;
+		String d ="aaaa";
+
+
+		String e= a+b+c+d;
+
+		System.out.println("足し算"+e);
+
+
+
+
+	}
+
+}

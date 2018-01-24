@@ -22,8 +22,10 @@
 <s:submit value="登録"/>
 
 </s:form>
+
+
 </tr>
 </table>
-
+<p>mypageに移動する<a href='<s:url action="GoMypageAction" />'>こちら</a></p>
 </body>
 </html>
