@@ -478,3 +478,9 @@
 0:0:0:0:0:0:0:1 - - [24/Jan/2018:17:44:18 +0900] "POST /Booksell/ManagerLoginAction.action HTTP/1.1" 200 1004
 0:0:0:0:0:0:0:1 - - [24/Jan/2018:17:44:21 +0900] "GET /Booksell/GoProductCreateAction.action HTTP/1.1" 200 1576
 0:0:0:0:0:0:0:1 - - [24/Jan/2018:17:44:49 +0900] "POST /Booksell/ProductCreateCompleteAction.action HTTP/1.1" 200 1576
+127.0.0.1 - - [24/Jan/2018:17:54:12 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:17:54:14 +0900] "GET /Booksell/ HTTP/1.1" 200 866
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:17:54:19 +0900] "GET /Booksell/GoManagerLoginAction.action HTTP/1.1" 200 760
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:17:54:22 +0900] "POST /Booksell/ManagerLoginAction.action HTTP/1.1" 200 1004
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:17:54:24 +0900] "GET /Booksell/GoProductCreateAction.action HTTP/1.1" 200 1576
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:17:54:53 +0900] "POST /Booksell/ProductCreateCompleteAction.action HTTP/1.1" 200 1576

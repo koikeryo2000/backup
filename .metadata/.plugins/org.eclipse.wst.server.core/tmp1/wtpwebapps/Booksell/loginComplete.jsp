@@ -11,6 +11,7 @@
 <body>
 	<h3>ログインに成功しました。</h3>
 	<p>仮想通貨を登録する<a href='<s:url action="GoChargeWalletAction" />'>こちら</a></p>
+	<p>商品を購入する<a href='<s:url action="UserShowProductListAction" />'>こちら</a></p>
 	<p>登録情報変更は<a href='<s:url action="GoUserInformationAction" />'>こちら</a></p>
 	<p>ログアウトする場合は<a href='<s:url action="LogoutAction" />'>こちら</a></p>
 	<p>mypageに移動する<a href='<s:url action="GoMypageAction" />'>こちら</a></p>

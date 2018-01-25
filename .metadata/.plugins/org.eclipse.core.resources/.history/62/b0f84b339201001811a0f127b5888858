@@ -1,0 +1,41 @@
+package action;
+
+import java.util.ArrayList;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import dao.ShowProductDAO;
+import dto.ProductDTO;
+
+public class ProductDetailAction extends ActionSupport {
+
+	private String itemName;
+
+	ShowProductDAO showProductDAO = new ShowProductDAO();
+
+	public ArrayList<ProductDTO> productList = new ArrayList<ProductDTO>();
+
+	public String execute(){
+		String result;
+
+		System.out.println("商品名が送られてるかチェック"+itemName);
+
+
+
+		result =SUCCESS;
+
+		return result;
+
+
+	}
+
+	public String getItemName() {
+		return itemName;
+	}
+
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+
+
+}

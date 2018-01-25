@@ -1,0 +1,52 @@
+package action;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import dao.SearchProductDAO;
+import dao.ShowProductDAO;
+import dto.ProductDTO;
+
+public class ProductDetailAction extends ActionSupport {
+
+	private String itemName;
+
+	ShowProductDAO showProductDAO = new ShowProductDAO();
+
+	public ArrayList<ProductDTO> productList = new ArrayList<ProductDTO>();
+
+	SearchProductDAO searchProductdao = new SearchProductDAO();
+
+
+	public String execute(){
+		String result;
+
+		System.out.println("商品名が送られてるかチェック"+itemName);
+
+		productList = searchProductdao.searchProduct(itemName);
+
+		Iterator<ProductDTO> iterator = productList.iterator();
+
+		if (!(iterator.hasNext())) {
+			productList = null;
+		}
+
+		result =SUCCESS;
+
+		return result;
+
+
+	}
+
+	public String getItemName() {
+		return itemName;
+	}
+
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+
+
+}

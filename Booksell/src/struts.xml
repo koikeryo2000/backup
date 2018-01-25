@@ -231,14 +231,37 @@
 
 <!-- 商品一覧を表示するページに移動  -->
 <action name="GoShowProductListAction" class="action.GoShowProductListAction" method="execute" >
-<result name="success">ProductCreate.jsp</result>
+<result name="success">ShowProductList.jsp</result>
 </action>
 
 
 <!-- 商品一覧を表示する  -->
 <action name="ShowProductListAction" class="action.ShowProductListAction" method="execute" >
-<result name="success">ProductCreate.jsp</result>
+<result name="success">ShowProductList.jsp</result>
 </action>
+
+<!-- 商品情報を変更する  -->
+<action name="ProductUpdateAction" class="action.ProductUpdateAction" method="execute" >
+<result name="success">ShowProductList.jsp</result>
+</action>
+
+<!-- ユーザーに商品一覧を見せる  -->
+<action name="UserShowProductListAction" class="action.UserShowProductListAction" method="execute" >
+<result name="success">UserShowProductList.jsp</result>
+</action>
+
+<!-- 商品詳細  -->
+<action name="ProductDetailAction" class="action.ProductDetailAction" method="execute" >
+<result name="success">ProductDetails.jsp</result>
+</action>
+
+<!-- 商品検索  -->
+<action name="SearchProductAction" class="action.SearchProductAction" method="execute" >
+<result name="success">UserShowProductList.jsp</result>
+</action>
+
+
+
 
 
 

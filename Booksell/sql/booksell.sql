@@ -41,6 +41,7 @@ item_name varchar(50) unique,
 item_price int,
 item_stock int,
 image varchar(250),
+product varchar(250),
 Category varchar(30),
 Description varchar(200),
 user_master_id varchar(16),
@@ -84,6 +85,17 @@ insert_date datetime
   name VARCHAR(20),
   image MEDIUMBLOB
  ) ;
+ 
+ create table shopping_cart(
+id int not null primary key auto_increment,
+item_name varchar(50),
+price int,
+stock int,
+image varchar(200),
+shopping_cart,(10),
+user_master_id varchar(16),
+insert_date datetime
+);
 
 INSERT INTO item_info_transaction(item_name, item_price, item_stock, Category, Description, user_master_id) VALUES("ブラックジャックによろしく", 500, 1,"漫画", "藪医者物語","テスト");
 INSERT INTO Manager_transaction(login_id, login_pass, user_name, year, position, user_master_id) VALUES("test", "1234", "テスト","58", "社長","テスト");

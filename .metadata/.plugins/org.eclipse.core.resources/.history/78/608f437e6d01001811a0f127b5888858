@@ -1,0 +1,30 @@
+package dao;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+
+import dto.ProductDTO;
+import util.DBConnector;
+
+public class ShowProductDAO {
+
+	ProductDTO productDTO = new ProductDTO();
+
+	private DBConnector dbConnector = new DBConnector();
+
+	private Connection connection = dbConnector.getConnection();
+
+	public ArrayList<ProductDTO> ShowProduct(){
+		ArrayList<ProductDTO> productDTO = new ArrayList<ProductDTO>();
+
+		String sql = "SELECT * FROM item_info";
+
+		try {
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		return productDTO;
+	}
+}

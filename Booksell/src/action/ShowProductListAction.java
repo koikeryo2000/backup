@@ -1,0 +1,37 @@
+package action;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import dao.ShowProductDAO;
+import dto.ProductDTO;
+
+public class ShowProductListAction extends ActionSupport {
+
+
+
+	ShowProductDAO showProductDAO = new ShowProductDAO();
+
+	public ArrayList<ProductDTO> productList = new ArrayList<ProductDTO>();
+
+	public String execute(){
+		String result;
+
+		productList = showProductDAO.ShowProduct();
+
+		Iterator<ProductDTO> iterator = productList.iterator();
+
+		if (!(iterator.hasNext())) {
+			productList = null;
+		}
+
+		result=SUCCESS;
+		return result;
+
+
+
+	}
+
+}

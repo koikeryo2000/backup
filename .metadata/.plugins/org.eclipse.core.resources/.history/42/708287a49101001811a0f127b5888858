@@ -1,0 +1,30 @@
+package action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ProductDetailAction extends ActionSupport {
+
+	private String itemName;
+
+	public String execute(){
+		String result;
+
+		System.out.println("商品名が送られてるかチェック"+itemName);
+
+		result =SUCCESS;
+
+		return result;
+
+
+	}
+
+	public String getItemName() {
+		return itemName;
+	}
+
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+
+
+}

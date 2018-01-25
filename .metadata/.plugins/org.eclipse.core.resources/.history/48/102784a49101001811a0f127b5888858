@@ -1,0 +1,66 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+import dto.ProductDTO;
+import util.DBConnector;
+
+public class SearchProductDAO {
+
+	private DBConnector dbConnector = new DBConnector();
+
+	private Connection connection = dbConnector.getConnection();
+
+
+
+
+
+	public ArrayList<ProductDTO> searchProduct(String itemName){
+		ArrayList<ProductDTO> productDTO = new ArrayList<ProductDTO>();
+
+		String sql="SELECT * FROM item_info where item_name = ?";
+
+		try {
+			PreparedStatement preparedStatement =connection.prepareStatement(sql);
+
+			preparedStatement.setString(1, itemName);
+
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			if (resultSet.next()) {
+				 ProductDTO dto = new ProductDTO();
+				dto.setItemName(resultSet.getString("item_name"));
+				dto.setItemPrice(resultSet.getInt("item_price"));
+				dto.setItemStock(resultSet.getInt("item_stock"));
+				dto.setImage(resultSet.getString("image"));
+				dto.setProduct(resultSet.getString("product"));
+				dto.setCategory(resultSet.getString("Category"));
+				dto.setDescription(resultSet.getString("Description"));
+				dto.setInsertdate(resultSet.getDate("insert_date"));
+				productDTO.add(dto);
+			}
+
+
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+
+				e.printStackTrace();
+			}
+		}
+
+		return null;
+
+	}
+}

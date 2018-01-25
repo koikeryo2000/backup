@@ -1,0 +1,109 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import dto.ProductDTO;
+import util.DBConnector;
+
+public class SearchProductDAO {
+
+	private DBConnector dbConnector = new DBConnector();
+
+	private Connection connection = dbConnector.getConnection();
+
+
+
+
+
+	public ArrayList<ProductDTO> searchProduct(String itemName){
+		ArrayList<ProductDTO> productDTO = new ArrayList<ProductDTO>();
+
+		String sql="SELECT * FROM item_info where item_name = ?";
+
+		try {
+			PreparedStatement preparedStatement =connection.prepareStatement(sql);
+
+			preparedStatement.setString(1, itemName);
+
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			if (resultSet.next()) {
+				 ProductDTO dto = new ProductDTO();
+				dto.setItemName(resultSet.getString("item_name"));
+				dto.setItemPrice(resultSet.getInt("item_price"));
+				dto.setItemStock(resultSet.getInt("item_stock"));
+				dto.setImage(resultSet.getString("image"));
+				dto.setProduct(resultSet.getString("product"));
+				dto.setCategory(resultSet.getString("Category"));
+				dto.setDescription(resultSet.getString("Description"));
+				dto.setLogin_user_id(resultSet.getString("user_master_id"));
+				dto.setInsertdate(resultSet.getDate("insert_date"));
+				productDTO.add(dto);
+				System.out.println("daoのＤＴＯ中身"+dto.getItemName());
+				System.out.println("daoのＤＴＯ中身"+dto.getItemPrice());
+			}
+
+
+
+
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+
+				e.printStackTrace();
+			}
+		}
+
+		return productDTO;
+
+	}
+	public ArrayList<ProductDTO>  ColumnSearchProductDAO(String column, String change){
+		ArrayList<ProductDTO> productdto = new ArrayList<ProductDTO>();
+
+		//String sql2 ="SELECT * FROM item_info where "+ column +" = ?";
+		String sql3 ="SELECT * FROM item_info where "+ column +" LIKE ?%";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(sql3);
+
+			preparedStatement.setString(1, change);
+
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			while (resultSet.next()) {
+				ProductDTO Dto = new ProductDTO();
+				Dto.setItemName(resultSet.getString("item_name"));
+				Dto.setItemPrice(resultSet.getInt("item_price"));
+				Dto.setItemStock(resultSet.getInt("item_stock"));
+				Dto.setImage(resultSet.getString("image"));
+				Dto.setProduct(resultSet.getString("product"));
+				Dto.setCategory(resultSet.getString("Category"));
+				Dto.setDescription(resultSet.getString("Description"));
+				Dto.setLogin_user_id(resultSet.getString("user_master_id"));
+				Dto.setInsertdate(resultSet.getDate("insert_date"));
+				productdto.add(Dto);
+			}
+
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+
+				e.printStackTrace();
+			}
+		}
+
+		return productdto;
+	}
+}

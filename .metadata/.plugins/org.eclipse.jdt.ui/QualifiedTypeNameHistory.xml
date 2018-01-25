@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.internousdev.ecsite.util.DBConnector"/>
-<fullyQualifiedTypeName name="com.internousdev.ecsite.dto.BuyItemDTO"/>
-<fullyQualifiedTypeName name="com.internousdev.ecsite.dto.LoginDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite.dto.MyPageDTO"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="freemarker.template.SimpleDate"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="dao.UserCreateCompleteDAO"/>
@@ -33,19 +29,15 @@
 <fullyQualifiedTypeName name="dao.ItemCreateDAO"/>
 <fullyQualifiedTypeName name="util.DBConnector"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="dto.ItemDTO"/>
 <fullyQualifiedTypeName name="dao.ShowItemListDAO"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="java.io.OutputStream"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.sql.Blob"/>
 <fullyQualifiedTypeName name="dao.UnsubscribeDAO"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="dto.UserInformationDTO"/>
 <fullyQualifiedTypeName name="dao.ShowUserInformationDAO"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="dao.UserUpdateDAO"/>
 <fullyQualifiedTypeName name="dao.ItemUpdateDAO"/>
 <fullyQualifiedTypeName name="com.sun.xml.internal.ws.encoding.fastinfoset.FastInfosetStreamSOAPCodec"/>
@@ -53,11 +45,19 @@
 <fullyQualifiedTypeName name="dao.NetMoneyCreateCompleteDAO"/>
 <fullyQualifiedTypeName name="util.NetMoneyCode"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
-<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
-<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="action.ChargeWalletAction"/>
 <fullyQualifiedTypeName name="dao.ChageWalletDAO"/>
 <fullyQualifiedTypeName name="dto.WalletDTO"/>
+<fullyQualifiedTypeName name="dto.UnsubscribeDTO"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="dao.UnsubscribeListDAO"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="dao.ProductCreateDAO"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 </qualifiedTypeNameHistroy>
