@@ -1,24 +1,32 @@
 package dao;
 
+import java.util.ArrayList;
 
-
+import dto.ShoppingCartDTO;
 
 public class Test2 {
 
 	public static void main(String[] args) {
 
-		String a ;
-		String b ;
-		String c ;
-		String d ;
+		ArrayList<ShoppingCartDTO> SpList = new ArrayList<ShoppingCartDTO>();
+
+		 ShoppingCartDTO scDTO = new ShoppingCartDTO();
+
+		 ShoppingCartDAO scdao = new ShoppingCartDAO();
+
+		 String id ="koike";
+
+		 //scDTO = scdao.gettotal(id);
 
 
 
-		String e;
+		 System.out.println("数"+scDTO.getTotal());
+
+		// System.out.println("数"+SpList.get(0));
 
 
 
-		//System.out.println("足し算"+e);
+
 
 
 

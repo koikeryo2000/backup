@@ -260,6 +260,10 @@
 <result name="success">UserShowProductList.jsp</result>
 </action>
 
+<!-- 商品をカートへ追加  -->
+<action name="CreateShoppingCartAction" class="action.ShoppingCartAction" method="execute" >
+<result name="success">ShoppingCart.jsp</result>
+</action>
 
 
 

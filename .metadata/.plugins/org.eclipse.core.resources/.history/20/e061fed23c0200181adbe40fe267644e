@@ -1,0 +1,16 @@
+package dao;
+
+import java.sql.Connection;
+
+import util.DBConnector;
+import util.DateUtil;
+
+public class ShoppingCartDAO {
+	private DateUtil dateUtil = new DateUtil();
+
+	private DBConnector dbConnector = new DBConnector();
+
+	private Connection connection = dbConnector.getConnection();
+
+	public String sql ="INSERT INTO shopping_cart(item_name, price, stock, image, user_master_id, insert_date) VALUES(?,?,?,?,?,?,?,?)";
+}

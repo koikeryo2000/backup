@@ -1,0 +1,28 @@
+package dao;
+
+import java.util.ArrayList;
+
+import dto.ShoppingCartDTO;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+
+		 ArrayList<ShoppingCartDTO> ShoppingList = new ArrayList<ShoppingCartDTO>();
+
+		 ShoppingCartDAO scdao = new ShoppingCartDAO();
+
+		 String id ="koike";
+
+		 ShoppingList = scdao.gettotal(id);
+
+		 System.out.println("aaaa"+ShoppingList);
+
+
+
+
+
+
+	}
+
+}

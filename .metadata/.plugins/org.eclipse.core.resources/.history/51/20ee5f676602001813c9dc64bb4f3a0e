@@ -1,0 +1,38 @@
+package dao;
+
+import java.util.ArrayList;
+
+import dto.ShoppingCartDTO;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+
+		int sum;
+
+		ArrayList<ShoppingCartDTO> SpList = new ArrayList<ShoppingCartDTO>();
+
+		 //ShoppingCartDTO scDTO = new ShoppingCartDTO();
+
+		 ShoppingCartDAO scdao = new ShoppingCartDAO();
+
+		 String id ="koike";
+
+		 SpList = scdao.gettotal(id);
+
+		System.out.println("要素数"+SpList.size());
+
+		System.out.println("数"+SpList.get(1));
+
+
+
+
+
+
+
+
+
+
+	}
+
+}

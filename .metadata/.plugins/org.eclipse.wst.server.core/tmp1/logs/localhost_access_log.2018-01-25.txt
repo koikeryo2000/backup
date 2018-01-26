@@ -478,3 +478,12 @@
 0:0:0:0:0:0:0:1 - - [25/Jan/2018:17:55:02 +0900] "POST /Booksell/LoginAction.action HTTP/1.1" 200 703
 0:0:0:0:0:0:0:1 - - [25/Jan/2018:17:55:05 +0900] "GET /Booksell/UserShowProductListAction.action HTTP/1.1" 200 3896
 0:0:0:0:0:0:0:1 - - [25/Jan/2018:17:55:17 +0900] "POST /Booksell/SearchProductAction.action HTTP/1.1" 200 863
+127.0.0.1 - - [25/Jan/2018:18:01:54 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:18:01:56 +0900] "GET /Booksell/ HTTP/1.1" 200 866
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:18:02:01 +0900] "POST /Booksell/LoginAction.action HTTP/1.1" 200 703
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:18:02:02 +0900] "GET /Booksell/UserShowProductListAction.action HTTP/1.1" 200 3896
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:18:02:11 +0900] "POST /Booksell/SearchProductAction.action HTTP/1.1" 200 2103
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:18:02:36 +0900] "POST /Booksell/SearchProductAction.action HTTP/1.1" 200 863
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:18:02:45 +0900] "POST /Booksell/SearchProductAction.action HTTP/1.1" 200 863
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:18:02:51 +0900] "POST /Booksell/SearchProductAction.action HTTP/1.1" 200 2082
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:18:03:00 +0900] "POST /Booksell/SearchProductAction.action HTTP/1.1" 200 1478

@@ -1,15 +1,20 @@
 package dao;
 
-import org.apache.commons.lang3.RandomStringUtils;
+
 
 public class Test3 {
 
 	public static void main(String[] args) {
-		String str1 =RandomStringUtils.random(10,"012345ABCDEFGHIJKMLOPQRSTUWXYZ");
+		ShoppingCartDAO dao = new ShoppingCartDAO();
 
-		System.out.println(str1);
+		String itemName ="酒酒";
+		int itemprice = 500;
+		int itemstock =1;
+		String image ="jpg";
+		String userId ="koike";
 
-		System.out.println(RandomStringUtils.random(10,"012345ABCDEFGHIJKMLOPQRSTUWXYZ"));
+
+		//dao.createShoppingCart(itemName, itemprice, itemstock, image, userId);
 
 	}
 

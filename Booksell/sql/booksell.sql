@@ -85,14 +85,14 @@ insert_date datetime
   name VARCHAR(20),
   image MEDIUMBLOB
  ) ;
- 
+
  create table shopping_cart(
 id int not null primary key auto_increment,
 item_name varchar(50),
 price int,
 stock int,
+total int,
 image varchar(200),
-shopping_cart,(10),
 user_master_id varchar(16),
 insert_date datetime
 );

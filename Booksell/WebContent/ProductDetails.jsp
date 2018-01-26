@@ -8,7 +8,7 @@
 <title>商品詳細</title>
 </head>
 <body>
-<s:form action="">
+<s:form action="CreateShoppingCartAction">
 <table>
 <s:iterator value="productList">
 
@@ -17,6 +17,7 @@
 <label></label>
 </td>
 					<td>
+					<input type="hidden" name="image" value="<s:property value="image" />" />
 						<img width="100" height="100" src="<s:property value='image' />">
 					</td>
 
@@ -30,7 +31,7 @@
 </td>
 
 					<td>
-
+<input type="hidden" name="itemName" value="<s:property value="itemName" />" />
 						<s:property value="itemName" />
 
 					</td>
@@ -41,6 +42,7 @@
 <label>値段</label>
 </td>
 					<td>
+					<input type="hidden" name="itemPrice" value="<s:property value="itemPrice" />" />
 						<s:property value="itemPrice" />円
 					</td>
 					</tr>
@@ -50,15 +52,37 @@
 <label>在庫数</label>
 </td>
 					<td>
+					<input type="hidden" name="itemStock" value="<s:property value="itemStock" />" />
 						<s:property value="itemStock" />
 					</td>
 					</tr>
 
+
+					<tr>
+					<td>
+<label>購入する数を選んでください</label>
+</td>
+<td>
+
+<select required="required" name="Stock" >
+<option value="">-</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+
+
+
+</select>
+</td>
+</tr>
 							<tr>
 					<td>
 <label>カテゴリー</label>
 </td>
 					<td>
+
 						<s:property value="category" />
 					</td>
 					</tr>
@@ -80,7 +104,7 @@
 
 
 
-<s:submit value="変更"/>
+<s:submit value="カートへ追加"/>
 </table>
 </s:form>
 </body>
