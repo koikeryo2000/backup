@@ -1,0 +1,78 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib prefix="s" uri="/struts-tags" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>カート</title>
+</head>
+<body>
+
+
+
+
+
+
+<s:iterator value="cartList">
+<s:form action="ProductDetailAction">
+<table>
+
+
+
+
+<tr>
+
+					<td>
+<p><input type="image" src="<s:property value='image' />" alt="送信する"width="100" height="100" ></p>
+					</td>
+				</tr>
+
+<tr>
+
+
+
+					<td>
+
+<input type="hidden" name="Name" value="<s:property value="itemName" />" />
+						<s:property value="itemName" />
+
+
+
+					</td>
+					</tr>
+
+					<tr>
+			<td>
+					<s:property value="price" />円
+
+					</td>
+					</tr>
+
+								<tr>
+			<td>
+			<input type="hidden" name="stock" value="<s:property value="stock" />" />
+					<s:property value="stock" />個
+					</td>
+					</tr>
+
+
+<s:submit value="カートから削除する"/>
+
+
+
+
+
+
+
+
+</table>
+</s:form>
+</s:iterator>
+
+
+合計<s:property value="#session.Usertotal" />円です
+
+
+</body>
+</html>

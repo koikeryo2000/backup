@@ -1,0 +1,52 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import util.DBConnector;
+import util.DateUtil;
+
+public class BuyItemUserDAO {
+
+	private DBConnector dbConnector = new DBConnector();
+
+	private Connection connection = dbConnector.getConnection();
+
+	 private DateUtil dateUtil = new DateUtil();
+
+	public void CreateProductUser(int productId, String Name, int price, int total_price,int stock, int user_total_price, String pay, String image,String situation, String loginId){
+		String sql = "INSERT INTO user_buy_item_transaction (item_transaction_id, item_name, price, total_price, stock, user_total_price, pay, image, situation, user_master_id, insert_date) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?)";
+
+		try {
+			PreparedStatement preparedStatement =connection.prepareStatement(sql);
+
+			preparedStatement.setInt(1, productId);
+			preparedStatement.setString(2, Name);
+			preparedStatement.setInt(3, price);
+			preparedStatement.setInt(4, total_price);
+			preparedStatement.setInt(5, stock);
+			preparedStatement.setInt(6, user_total_price);
+			preparedStatement.setString(7, pay);
+			preparedStatement.setString(8, image);
+			preparedStatement.setString(9, situation);
+			preparedStatement.setString(10, loginId);
+			preparedStatement.setString(11, dateUtil.getDate());
+
+			preparedStatement.execute();
+
+
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+
+	}finally {
+		try {
+			connection.close();
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+	}
+}
+}

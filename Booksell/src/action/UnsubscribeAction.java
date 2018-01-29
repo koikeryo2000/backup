@@ -78,18 +78,14 @@ String d="";
 
 
 
-		try {
+
 			unsubscribeDAO.deleteUser(session.get("loginUserId").toString());
-		} catch (Exception e) {
-
-		}
 
 
-		try {
+
+
 			unsubscribeDAO.Unsubscribe(session.get("loginUserId").toString(), total, reason);
-		} catch (Exception e) {
 
-		}
 
 		String result =SUCCESS;
 

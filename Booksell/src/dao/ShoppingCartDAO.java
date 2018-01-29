@@ -56,12 +56,15 @@ public class ShoppingCartDAO {
 
 			while (resultSet.next()) {
 				ShoppingCartDTO dto = new ShoppingCartDTO();
+				dto.setId(resultSet.getInt("id"));
 				dto.setItemName(resultSet.getString("item_name"));
 				dto.setPrice(resultSet.getInt("price"));
 				dto.setStock(resultSet.getInt("stock"));
+				dto.setProducttotal(resultSet.getInt("total"));
 				dto.setImage(resultSet.getString("image"));
 				dto.setUserId(resultSet.getString("user_master_id"));
 				dto.setInsertdate(resultSet.getDate("insert_date"));
+
 				shoppingList.add(dto);
 
 			}

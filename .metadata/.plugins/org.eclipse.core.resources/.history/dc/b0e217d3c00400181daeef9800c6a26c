@@ -1,0 +1,16 @@
+package dto;
+
+public class BuyDTO {
+
+	private int[] itemId;
+	private String[] itemName;
+	private int[] price;
+	private int[] totalPrice;
+	private int[] stock;
+	private int[] UserTotalPrice;
+	private String[] pay;
+	private String[] image;
+	private String[] situation;
+	private String[] userId;
+
+}

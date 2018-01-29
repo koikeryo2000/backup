@@ -1,0 +1,76 @@
+package dto;
+
+public class BuyDTO {
+
+	private int ProductId;
+	private String ProductName;
+	private int price;
+	private int totalPrice;
+	private int stock;
+	private int UserTotalPrice;
+	private String pay;
+	private String image;
+	private String situation;
+	private String userId;
+	public int getProductId() {
+		return ProductId;
+	}
+	public void setProductId(int productId) {
+		ProductId = productId;
+	}
+	public String getProductName() {
+		return ProductName;
+	}
+	public void setProductName(String productName) {
+		ProductName = productName;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public int getTotalPrice() {
+		return totalPrice;
+	}
+	public void setTotalPrice(int totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+	public int getStock() {
+		return stock;
+	}
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+	public int getUserTotalPrice() {
+		return UserTotalPrice;
+	}
+	public void setUserTotalPrice(int userTotalPrice) {
+		UserTotalPrice = userTotalPrice;
+	}
+	public String getPay() {
+		return pay;
+	}
+	public void setPay(String pay) {
+		this.pay = pay;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public String getSituation() {
+		return situation;
+	}
+	public void setSituation(String situation) {
+		this.situation = situation;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+}

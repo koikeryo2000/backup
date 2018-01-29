@@ -1,0 +1,61 @@
+package action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class BuyProductAction extends ActionSupport{
+
+	private String[] Name;
+	private int[] price;
+	private int[] stock;
+	private int[] Producttotal;
+
+	public String execute(){
+		String result;
+		for(int i=0; Name.length >i;i++){
+		System.out.println("値チェック"+Name[i]);
+		System.out.println("値チェック"+price[i]);
+		System.out.println("値チェック"+stock[i]);
+		System.out.println("値チェック"+Producttotal[i]);
+		}
+		result =SUCCESS;
+
+
+
+		return result;
+
+
+
+}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+
+	public int getProducttotal() {
+		return Producttotal;
+	}
+
+	public void setProducttotal(int producttotal) {
+		Producttotal = producttotal;
+	}
+}

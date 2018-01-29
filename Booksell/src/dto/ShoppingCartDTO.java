@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class ShoppingCartDTO {
 
+
+
 	private String itemName;
 	private int price;
 	private int stock;
@@ -11,6 +13,8 @@ public class ShoppingCartDTO {
 	private int total;
 	private String UserId;
 	private Date insertdate;
+	private int id;
+	private int Producttotal;
 	public String getItemName() {
 		return itemName;
 	}
@@ -53,6 +57,18 @@ public class ShoppingCartDTO {
 	}
 	public void setTotal(int total) {
 		this.total = total;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getProducttotal() {
+		return Producttotal;
+	}
+	public void setProducttotal(int producttotal) {
+		Producttotal = producttotal;
 	}
 
 }

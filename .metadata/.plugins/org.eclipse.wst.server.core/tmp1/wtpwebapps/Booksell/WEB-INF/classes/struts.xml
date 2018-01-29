@@ -265,6 +265,24 @@
 <result name="success">ShoppingCart.jsp</result>
 </action>
 
+<!-- ショッピングカートの中身を1つ削除する -->
+<action name="DeleteCartAction" class="action.DeleteCartAction" method="execute" >
+<result name="success">ShoppingCart.jsp</result>
+</action>
+
+<!-- ショッピングカートの中身をすべて削除する -->
+<action name="AllDeleteShoppingCartAction" class="action.AllDeleteShoppingCartAction" method="execute" >
+<result name="success">loginComplete.jsp</result>
+</action>
+
+
+
+<!-- 商品を購入する -->
+<action name="BuyProductAction" class="action.BuyProductAction"  method="execute" >
+<result name="success">BuyProductAction.jsp</result>
+</action>
+
+
 
 
 

@@ -15,7 +15,7 @@
 
 
 <s:iterator value="cartList">
-<s:form action="ProductDetailAction">
+<s:form action="DeleteCartAction">
 <table>
 
 
@@ -56,6 +56,22 @@
 					</td>
 					</tr>
 
+										<tr>
+			<td>
+			<input type="hidden" name="Producttotal" value="<s:property value="Producttotal" />" />
+					<s:property value="Producttotal" />円
+					</td>
+					</tr>
+
+							<tr>
+			<td>
+
+
+
+<input type="hidden" name="id" value="<s:property value="id" />" />
+					</td>
+					</tr>
+
 
 <s:submit value="カートから削除する"/>
 
@@ -71,8 +87,34 @@
 </s:iterator>
 
 
+
+
 合計<s:property value="#session.Usertotal" />円です
 
+<s:form action="AllDeleteShoppingCartAction">
+<s:submit value="カートの中身をすべて削除する"/>
+</s:form>
 
+<s:form action="BuyProductAction">
+<s:iterator value="cartList">
+
+
+<input type="hidden" name="Name" value="<s:property value="itemName" />" />
+<input type="hidden" name="price" value="<s:property value="price" />" />
+<input type="hidden" name="stock" value="<s:property value="stock" />" />
+<input type="hidden" name="image" value="<s:property value="image" />" />
+<input type="hidden" name="Producttotal" value="<s:property value="Producttotal" />" />
+<input type="hidden" name="Usertotal" value="<s:property value="#session.Usertotal" />" />
+<input type="hidden" name="Productid" value="<s:property value="id" />" />
+
+
+
+
+
+</s:iterator>
+
+
+<s:submit value="購入する"/>
+</s:form>
 </body>
 </html>

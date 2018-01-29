@@ -97,5 +97,22 @@ user_master_id varchar(16),
 insert_date datetime
 );
 
+create table user_buy_item_transaction(
+id int not null primary key auto_increment,
+item_transaction_id int,
+item_name varchar(50),
+price int,
+stock int,
+total_price int,
+user_total_price int,
+pay varchar(30),
+image varchar(200),
+situation varchar(30),
+user_master_id varchar(16),
+insert_date datetime,
+delete_date datetime
+);
+
+
 INSERT INTO item_info_transaction(item_name, item_price, item_stock, Category, Description, user_master_id) VALUES("ブラックジャックによろしく", 500, 1,"漫画", "藪医者物語","テスト");
 INSERT INTO Manager_transaction(login_id, login_pass, user_name, year, position, user_master_id) VALUES("test", "1234", "テスト","58", "社長","テスト");
