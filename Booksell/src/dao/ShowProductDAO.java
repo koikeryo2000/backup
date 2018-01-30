@@ -58,4 +58,37 @@ public class ShowProductDAO {
 
 		return productDTO;
 	}
+	public ProductDTO showProduct(String Name){
+
+		ProductDTO Dto = new ProductDTO();
+
+		String sql2 ="SELECT * FROM item_info where item_name = ?";
+
+		try {
+			PreparedStatement ps =connection.prepareStatement(sql2);
+
+			ps.setString(1, Name);
+
+			ResultSet resultSet = ps.executeQuery();
+
+			while (resultSet.next()) {
+
+				Dto.setItemStock(resultSet.getInt("item_stock"));
+
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		try {
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		return Dto;
+
+	}
+
 }

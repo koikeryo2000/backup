@@ -28,6 +28,8 @@
 
 <p>商品一覧を表示する<a href='<s:url action="GoShowProductListAction" />'>こちら</a></p>
 
+<p>発送状況を更新する<a href='<s:url action="ManagerUpdateBuyingHistoryAction" />'>こちら</a></p>
+
 
 </body>
 </html>

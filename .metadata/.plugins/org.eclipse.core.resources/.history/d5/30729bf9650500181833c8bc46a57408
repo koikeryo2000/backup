@@ -1,0 +1,37 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import dto.UserDTO;
+import util.DBConnector;
+
+public class ShowUserDAO {
+	private DBConnector dbConnector = new DBConnector();
+
+	private Connection connection = dbConnector.getConnection();
+
+	public UserDTO showUser(String loginId){
+
+		String sql ="SELECT * FROM login_user_transaction where login_id = ?";
+
+		try {
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ps.setString(1, loginId);
+
+			ResultSet resultSet =ps.executeQuery();
+
+			while (resultSet.next()) {
+
+
+
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		return null;
+
+	}
+}

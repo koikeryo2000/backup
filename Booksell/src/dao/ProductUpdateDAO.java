@@ -36,5 +36,22 @@ public class ProductUpdateDAO {
 				e.printStackTrace();
 			}
 		}
+
+
 	}
+	public void UserBuyUpdate(int stock, String Name){
+		String sql2 ="UPDATE item_info set item_stock = ? where item_name = ?";
+
+		try {
+			PreparedStatement ps =connection.prepareStatement(sql2);
+			ps.setInt(1, stock);
+			ps.setString(2, Name);
+
+			ps.execute();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
 }

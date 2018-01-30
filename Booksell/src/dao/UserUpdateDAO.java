@@ -43,7 +43,21 @@ public class UserUpdateDAO {
 				e.printStackTrace();
 			}
 		}
+	}
 
+		public void UserUpdateWallet(String loginId,int wallet){
+
+			String sql2="UPDATE login_user_transaction set wallet = ?  where login_id = ?";
+
+			try {
+				PreparedStatement ps = connection.prepareStatement(sql2);
+				ps.setInt(1, wallet);
+				ps.setString(2, loginId);
+
+				ps.execute();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 	}
 
 

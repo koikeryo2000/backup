@@ -1,0 +1,189 @@
+package action;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import dao.BuyItemUserDAO;
+import dao.DeleteCartDAO;
+import dao.ProductUpdateDAO;
+import dao.ShowProductDAO;
+import dao.ShowUserDAO;
+import dao.UserUpdateDAO;
+import dto.BuyDTO;
+import dto.ProductDTO;
+import dto.UserDTO;
+
+public class BuyProductAction extends ActionSupport implements SessionAware{
+
+	private String[] Name;
+	private int[] price;
+	private int[] stock;
+	private String[] image;
+	private int[] Usertotal;
+	private int[] Productid;
+	private int[] Producttotal;
+
+	public Map<String,Object> session;
+
+	ArrayList<BuyDTO> BuyList = new ArrayList<BuyDTO>();
+
+
+	BuyItemUserDAO biuDAO = new BuyItemUserDAO();
+
+	ProductUpdateDAO puDAO = new ProductUpdateDAO();
+
+	ShowProductDAO spDAO = new ShowProductDAO();
+
+	ShowUserDAO suDAO = new ShowUserDAO();
+
+	DeleteCartDAO dcDAO = new DeleteCartDAO();
+
+	BuyDTO buyDTO = new BuyDTO();
+
+	ProductDTO puDTO = new ProductDTO();
+
+	int total;
+
+	int UserWallet;
+
+	UserDTO userDTO = new UserDTO();
+
+	String errorMsg;
+
+	UserUpdateDAO usDAO = new UserUpdateDAO();
+
+	public String execute(){
+		String situation ="未発送";
+		String pay ="NetMoney";
+		String result;
+
+		dcDAO.alldeleteCart(session.get("loginUserId").toString());
+
+
+	 userDTO=suDAO.showUser(session.get("loginUserId").toString());
+
+	 System.out.println("合計"+Usertotal[0]);
+
+	 if (userDTO.getWallet()>Usertotal[0]) {
+		UserWallet = (userDTO.getWallet()-Usertotal[0]);
+		System.out.println("商品購入後の合計"+UserWallet);
+
+		usDAO.UserUpdateWallet(session.get("loginUserId").toString(), UserWallet);
+
+
+
+		for(int i=0; Name.length >i;i++){
+		System.out.println("値チェック"+Name[i]);
+		System.out.println("値チェック"+price[i]);
+		System.out.println("値チェック"+stock[i]);
+		System.out.println("値チェック"+Producttotal[i]);
+		System.out.println("値チェック"+image[i]);
+		System.out.println("値チェック"+Productid[i]);
+		System.out.println("値チェック"+Usertotal[i]);
+
+
+
+
+		biuDAO.CreateProductUser(Productid[i], Name[i], price[i], Producttotal[i], stock[i], Usertotal[i], pay, image[i],situation, session.get("loginUserId").toString());
+
+		puDTO = spDAO.showProduct(Name[i]);
+
+		total=(puDTO.getItemStock()-stock[i]);
+
+		System.out.println("合計金額"+ Usertotal[0]);
+
+		System.out.println("商品数の合計"+total);
+
+		puDAO.UserBuyUpdate(total, Name[i]);
+
+		}
+
+		}else {
+			errorMsg ="NetMoneyの残高が足りないため購入できません";
+		}
+
+
+
+
+
+
+
+
+		result =SUCCESS;
+
+
+
+		return result;
+
+
+
+}
+
+	public String[] getName() {
+		return Name;
+	}
+
+	public void setName(String[] name) {
+		Name = name;
+	}
+
+	public int[] getPrice() {
+		return price;
+	}
+
+	public void setPrice(int[] price) {
+		this.price = price;
+	}
+
+	public int[] getStock() {
+		return stock;
+	}
+
+	public void setStock(int[] stock) {
+		this.stock = stock;
+	}
+
+	public int[] getProducttotal() {
+		return Producttotal;
+	}
+
+	public void setProducttotal(int[] producttotal) {
+		Producttotal = producttotal;
+	}
+
+	public String[] getImage() {
+		return image;
+	}
+
+	public void setImage(String[] image) {
+		this.image = image;
+	}
+
+	public int[] getUsertotal() {
+		return Usertotal;
+	}
+
+	public void setUsertotal(int[] usertotal) {
+		Usertotal = usertotal;
+	}
+
+	public int[] getProductid() {
+		return Productid;
+	}
+
+	public void setProductid(int[] productid) {
+		Productid = productid;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+}
