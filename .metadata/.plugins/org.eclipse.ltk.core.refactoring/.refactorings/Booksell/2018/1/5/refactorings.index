@@ -1,2 +1,8 @@
 1517214251939	型名 'DeleteShoppingCartAction' を変更します
 1517216253634	型名 'UserBuyInfo' を変更します
+1517362031193	'ManagerUpdateBuyingHistoryComplete.jsp' を 'WebContent' に移動
+1517363907623	リソース 'ChangeProduct.jsp' の名前変更
+1517364355581	'ProductUpdate.jsp' を 'WebContent' に移動
+1517364830796	型名 'ChangeSituationAction' を変更します
+1517364900504	型名 'GoProductUpdateAction' を変更します
+1517385962496	型名 'UserReviw' を変更します

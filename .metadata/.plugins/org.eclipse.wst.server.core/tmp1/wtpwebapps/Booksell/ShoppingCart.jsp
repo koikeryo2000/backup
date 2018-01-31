@@ -78,10 +78,6 @@
 
 
 
-
-
-
-
 </table>
 </s:form>
 </s:iterator>
@@ -116,5 +112,8 @@
 
 <s:submit value="購入する"/>
 </s:form>
+
+<p>管理者ページに移動する<a href='<s:url action="GoShoppingAction" />'>商品一覧に戻る</a></p>
+
 </body>
 </html>

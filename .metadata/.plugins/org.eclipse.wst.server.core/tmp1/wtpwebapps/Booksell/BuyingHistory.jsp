@@ -12,6 +12,9 @@
 
 
 <s:iterator value="BuyHistoryList">
+<form action="GoUserReviwAction">
+<table>
+
 
 
 <tr>
@@ -27,7 +30,7 @@
 
 					<td>
 
-
+<input type="hidden" name="itemName" value="<s:property value="itemName" />" />
 						<s:property value="itemName" />
 
 
@@ -69,16 +72,23 @@
 			<td>
 
 
-
+<input type="hidden" name="situation" value="<s:property value="situation" />" />
 発送状況:<s:property value="situation" />
 					</td>
 					</tr>
 
 									<tr>
 			<td>
+		<input type="hidden" name="BuyDate" value="<s:property value="BuyDate" />" />
 購入日:<s:property value="BuyDate" />日
 					</td>
-					</tr>
+
+			</tr>
+
+			<s:submit value="レビュー"/>
+
+			</table>
+			</form>
 </s:iterator>
 
 

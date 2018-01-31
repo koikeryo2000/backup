@@ -1,0 +1,34 @@
+package action;
+
+import java.sql.Date;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class UserReviw extends ActionSupport implements SessionAware{
+
+	private String itemName;
+	private String situation;
+	private Date BuyDate;
+
+	public Map<String, Object> session;
+
+	public String result(){
+
+		String result = null;
+
+		if (situation.equals("受取済")) {
+
+			result =SUCCESS;
+
+
+		}
+
+
+
+		return result;
+
+	}
+}

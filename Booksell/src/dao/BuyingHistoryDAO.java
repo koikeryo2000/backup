@@ -65,11 +65,11 @@ public class BuyingHistoryDAO {
 	public ArrayList<BuyingHistoryDTO> ShowUserBuyingHistory(String situation){
 		ArrayList<BuyingHistoryDTO> BuyHistoryDto = new ArrayList<BuyingHistoryDTO>();
 
-		String sql2 ="SELECT * FROM user_buy_item_transaction where situation= ?";
-
+		//String sql2 ="SELECT * FROM user_buy_item_transaction where situation= ?";
+		String sql2 ="SELECT * FROM user_buy_item_transaction";
 		try {
 			PreparedStatement ps = connection.prepareStatement(sql2);
-			ps.setString(1, situation);
+			//ps.setString(1, situation);
 
 
 			ResultSet rs = ps.executeQuery();

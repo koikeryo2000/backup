@@ -1,0 +1,18 @@
+package dao;
+
+public class Test4 {
+
+	public static void main(String[] args) {
+		int a= 0;
+		int b= 1;
+
+
+		if (a>b) {
+			System.out.println("bより大きい");
+		}else {
+			System.out.println("aより小さい");
+		}
+
+	}
+
+}

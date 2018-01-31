@@ -225,3 +225,16 @@
 0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:38:08 +0900] "GET /Booksell/ HTTP/1.1" 200 866
 0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:38:13 +0900] "POST /Booksell/LoginAction.action HTTP/1.1" 200 792
 0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:38:17 +0900] "GET /Booksell/BuyingHistoryAction.action HTTP/1.1" 200 4554
+127.0.0.1 - - [30/Jan/2018:17:54:08 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:54:09 +0900] "GET /Booksell/ HTTP/1.1" 200 866
+0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:54:12 +0900] "GET /Booksell/GoManagerLoginAction.action HTTP/1.1" 200 760
+0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:54:14 +0900] "POST /Booksell/ManagerLoginAction.action HTTP/1.1" 200 1217
+0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:54:17 +0900] "GET /Booksell/ManagerUpdateBuyingHistoryAction.action HTTP/1.1" 200 3481
+0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:55:28 +0900] "GET /Booksell/ HTTP/1.1" 200 866
+0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:55:33 +0900] "GET /Booksell/GoManagerLoginAction.action HTTP/1.1" 200 760
+0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:55:37 +0900] "POST /Booksell/ManagerLoginAction.action HTTP/1.1" 200 1217
+0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:55:38 +0900] "GET /Booksell/ManagerUpdateBuyingHistoryAction.action HTTP/1.1" 200 3481
+0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:58:16 +0900] "GET /Booksell/ HTTP/1.1" 200 866
+0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:58:18 +0900] "GET /Booksell/GoManagerLoginAction.action HTTP/1.1" 200 760
+0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:58:21 +0900] "POST /Booksell/ManagerLoginAction.action HTTP/1.1" 200 1217
+0:0:0:0:0:0:0:1 - - [30/Jan/2018:17:58:24 +0900] "GET /Booksell/ManagerUpdateBuyingHistoryAction.action HTTP/1.1" 200 3481

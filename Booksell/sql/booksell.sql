@@ -113,6 +113,18 @@ insert_date datetime,
 delete_date datetime
 );
 
+create table user_review(
+id int not null primary key auto_increment,
+Review varchar(200),
+item_name varchar(50),
+rank int,
+flag varchar(10),
+user_master_id varchar(16),
+insert_date datetime,
+delete_date datetime
+);
+
+
 
 INSERT INTO item_info_transaction(item_name, item_price, item_stock, Category, Description, user_master_id) VALUES("ブラックジャックによろしく", 500, 1,"漫画", "藪医者物語","テスト");
 INSERT INTO Manager_transaction(login_id, login_pass, user_name, year, position, user_master_id) VALUES("test", "1234", "テスト","58", "社長","テスト");

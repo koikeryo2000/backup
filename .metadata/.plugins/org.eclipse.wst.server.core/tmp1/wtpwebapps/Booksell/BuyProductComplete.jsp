@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html >
 <html>
 <head>
@@ -10,5 +11,6 @@
 <p>無事購入することができました。</p>
 
 <p>mypageに移動する<a href='<s:url action="GoMypageAction" />'>こちら</a></p>
+
 </body>
 </html>

@@ -5,20 +5,20 @@ package dao;
 public class Test3 {
 
 	public static void main(String[] args) {
-		BuyItemUserDAO biuDAO = new BuyItemUserDAO();
+		ProductUpdateDAO biuDAO = new ProductUpdateDAO();
 
-		int productId =1;
-		String Name ="酒";
-		int price =100;
-		int total_price =100;
-		int stock =1;
-		int user_total_price=100;
-		String pay ="NetMoney";
-		String image ="a;skfa;sdafjpg";
-		String loginId="koike";
-		String situation ="未発送";
+		//int productId =1;
+		//String Name ="酒";
+		//int price =100;
+		//int total_price =100;
+		//int stock =1;
+		//int user_total_price=100;
+		String column ="item_name";
+		String change ="酒";
+		String itemName="高尾日本酒";
+		String id ="テスト";
 
-		biuDAO.CreateProductUser(productId, Name, price, total_price, stock, user_total_price, pay, image, situation, loginId);
+		biuDAO.ProductUpdate(column, change, itemName, id);
 
 
 

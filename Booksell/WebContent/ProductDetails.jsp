@@ -107,5 +107,8 @@
 <s:submit value="カートへ追加"/>
 </table>
 </s:form>
+
+<p>管理者ページに移動する<a href='<s:url action="GoShoppingAction" />'>商品一覧に戻る</a></p>
+
 </body>
 </html>

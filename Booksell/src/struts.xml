@@ -263,6 +263,13 @@
 <!-- 商品をカートへ追加  -->
 <action name="CreateShoppingCartAction" class="action.ShoppingCartAction" method="execute" >
 <result name="success">ShoppingCart.jsp</result>
+<result name="error">ShoppingCartError.jsp</result>
+</action>
+
+<!-- 商品購入ページに移動する -->
+
+<action name="GoShoppingAction" class="action.GoShoppingAction" method="execute" >
+<result name="success">UserShowProductList.jsp</result>
 </action>
 
 <!-- ショッピングカートの中身を1つ削除する -->
@@ -290,12 +297,38 @@
 </action>
 
 
+<!-- 管理者画面から発送状況を見る -->
+<action name="ManagerUpdateBuyingHistoryAction" class="action.ManagerUpdateBuyingHistoryAction"  method="execute" >
+<result name="success">ManagerUpdateBuyingHistory.jsp</result>
 
-<!-- 管理者画面から発送状況を変更する -->
+</action>
+
+
+<!-- 発送状況を変更する -->
 
 <action name="ChangeSituationAction" class="action.ChangeSituationAction"  method="execute" >
-<result name="success">ManagerUpdateBuyingHistory.jsp</result>
+<result name="success">ManagerUpdateBuyingHistoryComplete.jsp</result>
 </action>
+
+<!-- 商品情報変更ページに移動する -->
+
+<action name="GoProductUpdateAction" class="action.GoProductUpdateAction"  method="execute" >
+<result name="success">ProductUpdate.jsp</result>
+</action>
+
+<!-- 商品情報変更を変更する -->
+
+<action name="ProductUpdateAction" class="action.ProductUpdateAction"  method="execute" >
+<result name="success">ProductUpdate.jsp</result>
+</action>
+
+<!-- ユーザーレビューページに移動 -->
+<action name="GoUserReviwAction" class="action.GoUserReviwAction"  method="execute" >
+<result name="success">UserReviw.jsp</result>
+<result name="error">UserReviwError.jsp</result>
+</action>
+
+
 
 
 

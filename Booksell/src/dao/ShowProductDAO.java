@@ -74,6 +74,7 @@ public class ShowProductDAO {
 			while (resultSet.next()) {
 
 				Dto.setItemStock(resultSet.getInt("item_stock"));
+				Dto.setItemStock(resultSet.getInt("item_stock"));
 
 			}
 

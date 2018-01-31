@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 
 </head>
 <body>
@@ -18,6 +18,22 @@
 	<p>購入履歴を見る<a href='<s:url action="BuyingHistoryAction" />'>こちら</a></p>
 	<p>退会する<a href='<s:url action="GoUnsubscribeAction" />'>こちら</a></p>
 
+
+	<p>退会する<a href='<s:url action="GoUnsubscribeAction" />'>こちら</a></p>
+	<a href="file:///C:/Users/internousdev/Desktop/%E4%BA%88%E5%82%99/jpg.zip" >画像まとめ</a>
+
+	Download file - <s:a href="file:///C:/Users/internousdev/Desktop/%E4%BA%88%E5%82%99/jpg.zip">fileABC.txt</s:a>
+
+<a href="yourdomain.com/data/sample.csv" download="sample.csv"> CSVをダウンロードする</a>
+<a href="file:///C:/Users/internousdev/Desktop/%E4%BA%88%E5%82%99/jpg.zip" download="sample.csv"> CSVをダウンロードする</a>
+<a href="file:///C:/Users/internousdev/Desktop/product/jpg/" download>aaaaaaaaa</a>
+<a href="file:///C:/Users/internousdev/Desktop/product/jpg.zip" download ="jpg.zip" >bbbbbbbb</a>
+ <a href="http://webpad.felicyle.com/dl_file/temp/html/HTML4.01_Transitional.zip">eeeeee</a>
+ <a href="C:/Users/internousdev/Desktop/product/jpg.zip">ccccccccc</a>
+<a href="C:/Users/internousdev/Desktop/product/jpg.zip" download="jpg.zip">asasasa</a>
+<a href="C:/Users/internousdev/Desktop/product/jpgaae" download="jpgaae">サンプルテキスト</a>
+ file:///C:/Users/internousdev/Desktop/product/jpg.zip
+file:///C:/Users/internousdev/Desktop/product/jpg.zip
 
 </body>
 </html>

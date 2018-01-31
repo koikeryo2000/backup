@@ -30,6 +30,9 @@
 
 <p>発送状況を更新する<a href='<s:url action="ManagerUpdateBuyingHistoryAction" />'>こちら</a></p>
 
+<p>商品の情報を変更する<a href='<s:url action="GoProductUpdateAction" />'>こちら</a></p>
+
+<p></p>
 
 </body>
 </html>

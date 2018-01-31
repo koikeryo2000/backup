@@ -9,9 +9,9 @@
 </head>
 <body>
 
-<s:form action="ChangeSituationAction">
-<s:iterator value="UserBuyList">
 
+<s:iterator value="UserBuyList">
+<s:form action="ChangeSituationAction">
 <table>
 
 
@@ -108,11 +108,12 @@
 
 <s:submit value="発送済みに変更"/>
 </table>
+</s:form>
 </s:iterator>
 
+<p>管理者ページに移動する<a href='<s:url action="GoManagerPageAction" />'>こちら</a></p>
 
 
-</s:form>
 
 
 

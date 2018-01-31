@@ -8,6 +8,8 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.ShoppingCartDAO;
+import dao.ShowProductDAO;
+import dto.ProductDTO;
 import dto.ShoppingCartDTO;
 
 public class ShoppingCartAction extends ActionSupport implements SessionAware {
@@ -26,11 +28,15 @@ public class ShoppingCartAction extends ActionSupport implements SessionAware {
 
 	ShoppingCartDAO scDAO = new ShoppingCartDAO();
 
+	ShowProductDAO spDAO = new ShowProductDAO();
+
 	public ArrayList<ShoppingCartDTO> cartList = new ArrayList<ShoppingCartDTO>();
 
 	public ArrayList<ShoppingCartDTO> ShoppingList = new ArrayList<ShoppingCartDTO>();
 
 	public ArrayList<ShoppingCartDTO> SpList = new ArrayList<ShoppingCartDTO>();
+
+	ProductDTO Dto = new ProductDTO();
 
 	int a;
 
@@ -40,9 +46,15 @@ public class ShoppingCartAction extends ActionSupport implements SessionAware {
 		System.out.println("値渡されてるかチェック"+ image);
 		System.out.println("値渡されてるかチェック"+ itemName);
 		System.out.println("値渡されてるかチェック"+ itemPrice);
-		System.out.println("値渡されてるかチェック"+ itemStock);
+		System.out.println("aaa値渡されてるかチェック"+ itemStock);
 		System.out.println("値渡されてるかチェック"+ Stock);
 		System.out.println("値渡されてるかチェック"+ session.get("loginUserId").toString());
+		System.out.println("aaaa商品の数"+Dto.getItemStock());
+		Dto = spDAO.showProduct(itemName);
+
+		if (Dto.getItemStock() >= Stock) {
+
+
 
 		//scDAO.createShoppingCart(itemName, itemPrice, itemStock, image, session.get("login_user_id").toString());
 
@@ -84,7 +96,9 @@ public class ShoppingCartAction extends ActionSupport implements SessionAware {
 
 
 		result= SUCCESS;
-
+	}else {
+		result =ERROR;
+	}
 
 
 
